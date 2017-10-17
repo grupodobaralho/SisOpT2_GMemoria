@@ -1,0 +1,19 @@
+LRU = retira a página que estiver mais tempo sem ser acessada.
+    - é por acesso
+    - é por página
+
+Entrada aleatória = Devo criar um teste de forma aleatório.
+    Estrutura:
+        aloca(x);
+        while(true){
+            sleep(y);
+            90% acessa (random)
+            10% aloca (+1)
+        }
+
+M = mudança de um processo (precisar de mais memória).
+
+Tabela de bits = utilizando bloco é mais interessante
+               - para isso usamos linked list, em que cada posição contém um endereço inicial e um final. Assim que alocamos um pedaço do bloco, aloteramos o endereço inicial.
+
+Tando C, A e M podem gerar paga foul
