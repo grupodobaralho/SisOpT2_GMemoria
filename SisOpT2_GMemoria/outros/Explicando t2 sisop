@@ -1,8 +1,8 @@
-LRU = retira a página que estiver mais tempo sem ser acessada.
-    - é por acesso
-    - é por página
+LRU = retira a pagina que estiver mais tempo sem ser acessada.
+    - eh por acesso
+    - eh por pagina
 
-Entrada aleatória = Devo criar um teste de forma aleatório.
+Entrada aleatoria = Devo criar um teste de forma aleatório.
     Estrutura:
         aloca(x);
         while(true){
@@ -11,9 +11,9 @@ Entrada aleatória = Devo criar um teste de forma aleatório.
             10% aloca (+1)
         }
 
-M = mudança de um processo (precisar de mais memória).
+M = mudanca de um processo (precisar de mais memoria).
 
-Tabela de bits = utilizando bloco é mais interessante
-               - para isso usamos linked list, em que cada posição contém um endereço inicial e um final. Assim que alocamos um pedaço do bloco, aloteramos o endereço inicial.
+Tabela de bits = utilizando bloco eh mais interessante
+               - para isso usamos linked list, em que cada posicao contem um endereco inicial e um final. Assim que alocamos um pedaco do bloco, aloteramos o endereco inicial.
 
-Tando C, A e M podem gerar paga foul
+Tanto C, A e M podem gerar paga foult
