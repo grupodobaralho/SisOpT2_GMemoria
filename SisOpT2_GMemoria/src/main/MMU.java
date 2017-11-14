@@ -3,25 +3,24 @@ package main;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TabelaDePaginas {
+public class MMU {
 	
     private static final class Componentes {
-
-        public 
+        
         public boolean bitResidencia;	//Esta na Mem. Principal ou nao?
-        public boolean referencia; 		//foi referenciada ultimamente?
         public int contadorLRU;			//o que tiver o menor contador eh substituido
+        public int indiceNaMemoria;
 
-        public Componentes(Integer element, Integer level) {
+        public Componentes() {
         	this.contadorLRU = 0;
-            this.element = element;
-            this.level = level;
+        	this.bitResidencia = false;
+        	this.indiceNaMemoria = -1;
         }
     }
     
-    Map<String, Componente> tabelaDePaginas;
+    Map<String, Componentes> tabelaDePaginas;
 	
-	public TabelaDePaginas() {
+	public MMU() {
 		tabelaDePaginas = new HashMap<>();
 	}
 	

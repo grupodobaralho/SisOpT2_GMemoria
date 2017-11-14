@@ -21,12 +21,14 @@ public class App {
 	private static String tipoAlgTroca;
 	private static int tamPagina;
 	private static int tamMemFis;
-	private static int tamMemVirtual;
-	
+	private static int tamMemVirtual;	
 	private static String idProcesso;
-	//private static 
+	
+	private static int[] memVirtual;
+	private static int[] memFisica;
 	
 	public static void main(String[] args) {
+		load();
 		
 		
 	}
