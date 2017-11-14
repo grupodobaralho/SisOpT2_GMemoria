@@ -30,6 +30,8 @@ public class App {
 	public static void main(String[] args) {
 		load();
 		
+		memVirtual = new int[tamMemVirtual];
+		
 		
 	}
 	
