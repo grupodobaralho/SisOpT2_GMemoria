@@ -13,9 +13,9 @@ public class Pagina {
 	// o quanto esta pagina estah ocupada
 	private int mAloc;
 	// Esta na Mem. Principal ou nao?
-	public boolean bitResidencia;
+	private boolean bitResidencia;
 	// o que tiver o menor contador eh substituido
-	public int contadorLRU;
+	private int contadorLRU;
 	
 	public Pagina() {
 	}
@@ -79,6 +79,56 @@ public class Pagina {
 			}
 		}
 		mAloc += mAlocExtra;		
+	}
+	
+		
+	
+	public int getContadorLRU() {
+		return contadorLRU;
+	}
+
+	public void setContadorLRU(int contadorLRU) {
+		this.contadorLRU = contadorLRU;
+	}
+
+	public void setBitResidencia(boolean bitResidencia) {
+		this.bitResidencia = bitResidencia;
+	}
+
+	public String getIdProcesso() {
+		return idProcesso;
+	}
+
+	public void setIdProcesso(String idProcesso) {
+		this.idProcesso = idProcesso;
+	}
+
+	public int[] getiFis() {
+		return iFis;
+	}
+
+	public void setiFis(int[] iFis) {
+		this.iFis = iFis;
+	}
+
+	public int[] getiVirt() {
+		return iVirt;
+	}
+
+	public void setiVirt(int[] iVirt) {
+		this.iVirt = iVirt;
+	}
+
+	public int getmAloc() {
+		return mAloc;
+	}
+
+	public void setmAloc(int mAloc) {
+		this.mAloc = mAloc;
+	}
+
+	public boolean getBitResidencia(){
+		return bitResidencia;
 	}
 
 	public String getProcesso() {

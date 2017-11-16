@@ -24,12 +24,12 @@ public class App {
 
 	private static String tipoEntrada;
 	private static String tipoAlgTroca;
-	// o tamPagina eh double para facilitar arredondamento para cima apos divisao
+	// o tamPagina eh double para facilitar arredondamento para cima apos
+	// divisao
 	// matematica
 	private static int tamPagina;
 	private static int tamMemFisica;
 	private static int tamMemVirtual;
-	private static String idProcesso;
 
 	private static int contMemVitual = 0;
 	private static int nPaginasDisp = 0;
@@ -39,12 +39,12 @@ public class App {
 	private static int nFramesDisp = 0;
 	private static Pagina[] memFisica;
 
-	private static List<Processo> processos = new ArrayList<>();
+	private static Map<String, Processo> processos = new HashMap<>();
 	private static Map<String, Pagina> tabelaDePaginas = new HashMap<>();
 
 	public static void main(String[] args) {
 		load("teste2.txt");
-		//System.out.println(processos);
+		// System.out.println(processos);
 		printa();
 
 	}
@@ -101,55 +101,85 @@ public class App {
 
 	private static void alocaMemoria(String idProcesso, int tamProcesso) {
 
-		// System.out.println(idProcesso + " " + tamProcesso);
-		// System.out.println(quantPaginas);
-
 	}
 
 	private static void acessaMemoria(String idProcesso, int tamProcesso) {
-		// System.out.println(idProcesso + " " + tamProcesso);
+		// Confere se o processo existe na memoria
+		if (!processos.containsKey(idProcesso)) {
+			System.err.println("ERRO: Processo " + idProcesso + " nao existe!");
+			return;
+		}
+		if (processos.get(idProcesso).getTamProcesso() < tamProcesso || tamProcesso < 0) {
+			System.err.println("ERRO: Acesso a pagina inexistente: '" + tamProcesso + "' do processo: '" + idProcesso);
+			return;
+		}
 
+		int nPagina = (int) Math.ceil(tamProcesso / (double) tamPagina);
+		String idPagina = idProcesso + nPagina;
+		Pagina p = tabelaDePaginas.get(idPagina);
+
+		if (p.getBitResidencia()) {
+			p.setContadorLRU(p.getContadorLRU() + 1);
+		} else {
+			System.out.println("Page Fault");
+			Pagina pComMenorValor;
+			int menorC = Integer.MAX_VALUE;
+			for (Map.Entry<String, Pagina> entry : tabelaDePaginas.entrySet()) {
+				if (p.getBitResidencia()) {
+					Pagina entryValue = entry.getValue();
+					if (entryValue.getContadorLRU() < menorC) {
+						menorC = entryValue.getContadorLRU();
+						pComMenorValor = entryValue;
+					}
+				}
+			}
+		}
+		
+		
 	}
 
 	private static void criaProcesso(String idProcesso, int tamProcesso) {
 
 		int tamNeces = (int) (tamProcesso / (double) tamPagina);
 		// Verifica se ha espaco para o processo
-		System.out.println(nFramesDisp + " " + tamNeces + " " + nPaginasDisp + " " + tamNeces);
+		// System.out.println(nFramesDisp + " " + tamNeces + " " + nPaginasDisp
+		// + " " + tamNeces);
 		if (nFramesDisp < tamNeces && nPaginasDisp < tamNeces) {
 			System.err.println("Nao foi possivel adicionar processo " + idProcesso + ": Memoria cheia!");
-			System.exit(1);
+			return;
 		}
 
 		Processo proc = new Processo(idProcesso, tamProcesso);
 		int contIdPagina = 1;
 		int tamProcessoAux = tamProcesso;
-		//While, enquanto nao forem criadas todas paginas para o processo
+		// While, enquanto nao forem criadas todas paginas para o processo
 		while (!(tamProcessoAux <= 0)) {
-			
-			//definindo quantos indices serao alocados na pagina e quantos sobrarao
+
+			// definindo quantos indices serao alocados na pagina e quantos
+			// sobrarao
 			tamProcessoAux -= tamPagina;
-			System.out.println("AAAAAAAAAAAA " +tamProcessoAux);
 			int mAloc = tamProcessoAux;
 			if (mAloc >= 0)
 				mAloc = tamPagina;
 			else
-				mAloc = tamPagina + mAloc;	
-			
-			//Pagina eh criada recebendo as informacoes (incluindo qunto de seu espaço sera usado)
+				mAloc = tamPagina + mAloc;
+
+			// Pagina eh criada recebendo as informacoes (incluindo qunto de seu
+			// espaço sera usado)
 			Pagina pag = new Pagina(idProcesso, idProcesso + contIdPagina, tamPagina, mAloc);
 
-			//Verifica e nao permite criar pagina que jah exista
+			// Verifica e nao permite criar pagina que jah exista
 			if (tabelaDePaginas.containsKey(pag.getIdPagina())) {
 				System.err.println("Tentou adicionar uma pagina que ja existe: " + pag.getIdPagina());
 				System.exit(1);
 			}
-			
-			//Adiciona a Pagina na tabela de paginas
+
+			// Adiciona a Pagina na tabela de paginas
 			tabelaDePaginas.put(pag.getIdPagina(), pag);
-			
-			
-			//
+
+			// Procura espaço na memoria fisica e virtual e aloca pagina
+			// atualizando os parametros que informam espaco de memoria
+			// disponivel
 			int indice = -1;
 			for (int i = 0; i < memFisica.length; i++) {
 				if (memFisica[i] == null) {
@@ -157,37 +187,57 @@ public class App {
 					break;
 				}
 			}
-			if (indice == -1) {				
+			// System.out.println("Indice: "+indice);
+			if (indice == -1) {
 				for (int i = 0; i < memVirtual.length; i++) {
 					if (memVirtual[i] == null) {
 						indice = i;
 						break;
 					}
 				}
+				pag.adicionaMemoriaVirtual(indice, memVirtual);
+				nPaginasDisp--;
+			} else {
+				pag.adicionaMemoriaFisica(indice, memFisica);
+				nFramesDisp--;
 			}
-			pag.adicionaMemoriaFisica(indice, memFisica);
+
 			proc.addPagina(pag.getIdPagina());
 			contIdPagina++;
 		}
-		processos.add(proc);
-		//System.out.println(proc);
+		processos.put(proc.getId(), proc);
+		// System.out.println(proc);
 
 	}
-	
+
 	public static void printa() {
-		for(int i=0; i<memFisica.length; i++) {
-			if(memFisica[i]==null)
+		System.out.println("### Estado da memoria Fisica ###");
+		System.out.println("Indice - idFrame - naMemFisica? - memEmUsoDoFrame");
+		for (int i = 0; i < memFisica.length; i++) {
+			if (memFisica[i] == null)
 				System.out.println(i + "->" + "VAZIO");
 			else
 				System.out.println(i + "->" + memFisica[i]);
 		}
-		System.out.println();
-		for(int i=0; i<memVirtual.length; i++) {
-			if(memVirtual[i]==null) 
+		System.out.println("\n### Estado da memoria Virtual ###");
+		System.out.println("Indice - idPagina - naMemFisica? - memEmUsoDaPagina");
+		for (int i = 0; i < memVirtual.length; i++) {
+			if (memVirtual[i] == null)
 				System.out.println(i + "->" + "VAZIO");
-			else				
-				System.out.println(i + "->" + memVirtual[i]);			
+			else
+				System.out.println(i + "->" + memVirtual[i]);
 		}
+		System.out.println("\n### Tabela de Paginas ###");
+		System.out.println("idPagina - naMemFisica? - indice - cLRU");
+		tabelaDePaginas.forEach((key, value) -> {
+			int indiceMem = -1;
+			if (value.getBitResidencia())
+				indiceMem = value.getiFis()[0];
+			else
+				indiceMem = value.getiVirt()[0];
+			System.out.println(value.getIdPagina() + " " + value.getBitResidencia() + " " + indiceMem + " "
+					+ value.getContadorLRU());
+		});
 	}
 
 }
