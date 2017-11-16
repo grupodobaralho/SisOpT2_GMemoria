@@ -4,35 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Processo {
-	
-	private String id;
-	private int tamanho;
-	private List<Pagina> paginas;
-	
-	public Processo(String id, int tamanho) {		
-		this.id = id;
-		this.tamanho = tamanho;
-		this.paginas = new ArrayList<>();
-	}
-	
-	public void inserePagina(Pagina p) {
-		paginas.add(p);
-	}
-	
-	public void removePagina(Pagina p) {
-		paginas.remove(p);
-	}
 
+	private String id;
+	private int tamProcesso;
+	private List<String> paginas;
+
+	public Processo(String id, int tamProcesso) {
+		this.id = id;
+		this.tamProcesso = tamProcesso;
+		paginas = new ArrayList<>();
+	}	
+	
+	public void addPagina(String idPagina) {
+		paginas.add(idPagina);
+	}
+	
+	public int getQntPag() {
+		return paginas.size();
+	}
+	
 	public String getId() {
 		return id;
 	}
-
-	public void setId(String id) {
-		this.id = id;
+	
+	@Override
+	public String toString() {
+		return "Processo [id=" + id + ", tamProcesso=" + tamProcesso + ", paginas=" + paginas.size() + "]";
 	}
-
-	public List<Pagina> getPaginas() {
-		return paginas;
-	}
-
 }

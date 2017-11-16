@@ -3,7 +3,7 @@ package main;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MMU {
+public class TabelaDePaginas {
 	
     private static final class Componentes {
         
@@ -20,7 +20,7 @@ public class MMU {
     
     Map<String, Componentes> tabelaDePaginas;
 	
-	public MMU() {
+	public TabelaDePaginas() {
 		tabelaDePaginas = new HashMap<>();
 	}
 	
