@@ -42,7 +42,7 @@ public class App {
 	private static Map<String, Pagina> tabelaDePaginas = new LinkedHashMap<>();
 
 	public static void main(String[] args) {
-		load("teste2.txt");
+		load("meuteste.txt");
 		// System.out.println(processos);
 		printa();
 
@@ -129,39 +129,44 @@ public class App {
 			return;
 		}
 		// Confere se o a pagina existe na memoria
-		if (processos.get(idProcesso).getTamProcesso() < tamProcesso || tamProcesso < 0) {
+		if (processos.get(idProcesso).getTamProcesso() <= tamProcesso || tamProcesso < 0) {
 			System.err.println("ERRO: Acesso a pagina inexistente: '" + tamProcesso + "' do processo: '" + idProcesso
-					+ "Cujo tamanho eh: " + processos.get(idProcesso).getTamProcesso());
+					+ " cujo tamanho eh: " + processos.get(idProcesso).getTamProcesso());
 			return;
 		}
 
 		// Constroi o id da pagina para acessa-la na tabela de paginas
-		int nPagina = (int) Math.ceil(tamProcesso / (double) tamPagina);
+		int nPagina = (int) Math.floor(tamProcesso / (double) tamPagina);
 		String idPagina = idProcesso + nPagina;
 		Pagina p = tabelaDePaginas.get(idPagina);
 
-		// Se estiver na memoria fisica, soh atualiza o contador LRU refente na Tabela
-		if (!p.getBitResidencia()) { // Se nao estiver, page fault e faz swap para memoria fisica
-			System.out.println("Page Fault");
-			Pagina pComMenorValor = null;
-			int menorC = Integer.MAX_VALUE;
-			for (Map.Entry<String, Pagina> entry : tabelaDePaginas.entrySet()) {
-				Pagina entryValue = entry.getValue();
-				if (entryValue.getBitResidencia()) {
-					if (entryValue.getContadorLRU() < menorC) {
-						menorC = entryValue.getContadorLRU();
-						pComMenorValor = entryValue;
-					}
-				}
-			}
-			if (pComMenorValor == null)
-				System.err.println("ERRO: Pagina com Menor valor Cont nao encontrada! " + p.getIdPagina());
-			else {
-				p.swap(memFisica, memVirtual, pComMenorValor.getiFis()[0], pComMenorValor);
-			}
+		// Se nao estiver na memoria fisica, page fault e faz swap para memoria fisica 
+		if (!p.getBitResidencia()) {
+			pageFault(p);
 		}
+		//Atualiza o contador LRU refente na Tabela
 		p.setContadorLRU(p.getContadorLRU() + 1);
 
+	}
+	
+	private static void pageFault(Pagina p) {
+		System.out.println("Page Fault");
+		Pagina pComMenorValor = null;
+		int menorC = Integer.MAX_VALUE;
+		for (Map.Entry<String, Pagina> entry : tabelaDePaginas.entrySet()) {
+			Pagina entryValue = entry.getValue();
+			if (entryValue.getBitResidencia()) {
+				if (entryValue.getContadorLRU() < menorC) {
+					menorC = entryValue.getContadorLRU();
+					pComMenorValor = entryValue;
+				}
+			}
+		}
+		if (pComMenorValor == null)
+			System.err.println("ERRO: Pagina com Menor valor Cont nao encontrada! " + p.getIdPagina());
+		else {
+			p.swap(memFisica, memVirtual, pComMenorValor.getiFis()[0], pComMenorValor);
+		}
 	}
 
 	private static void criaProcesso(String idProcesso, int tamProcesso) {
@@ -179,7 +184,7 @@ public class App {
 	}
 
 	private static void criaPagina(String idProcesso, int qntAloc) {
-		int contIdPagina = 1;
+		int contIdPagina = 0;
 		int tamProcessoAux = qntAloc;
 		// While, enquanto nao forem criadas todas paginas para o processo
 		while (!(tamProcessoAux <= 0)) {
@@ -193,9 +198,8 @@ public class App {
 			else
 				mAloc = tamPagina + mAloc;
 
-			// Pagina eh criada recebendo as informacoes (incluindo quanto de seu
-			// espaço sera usado)
-			Pagina pag = new Pagina(idProcesso, idProcesso + contIdPagina, tamPagina, mAloc);
+			// Pagina eh criada recebendo idPagina, tamanho e qnt memoria a ser alocada
+			Pagina pag = new Pagina(idProcesso + contIdPagina, tamPagina, mAloc);
 
 			// Verifica e nao permite criar pagina que jah exista
 			if (tabelaDePaginas.containsKey(pag.getIdPagina())) {
@@ -225,6 +229,7 @@ public class App {
 					}
 				}
 				pag.adicionaMemoriaVirtual(indice, memVirtual);
+				pageFault(pag);
 				nPaginasDisp--;
 			} else {
 				pag.adicionaMemoriaFisica(indice, memFisica);

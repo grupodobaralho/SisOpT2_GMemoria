@@ -2,8 +2,6 @@ package main;
 
 public class Pagina {
 
-	// Identifica o processo referente
-	private String idProcesso;
 	// id da pagina
 	private String idPagina;
 	// indices para frames da mem. Fisica
@@ -20,8 +18,7 @@ public class Pagina {
 	public Pagina() {
 	}
 
-	public Pagina(String idProcesso, String idPagina, int tamPagina, int mAloc) {
-		this.idProcesso = idProcesso;
+	public Pagina( String idPagina, int tamPagina, int mAloc) {
 		this.idPagina = idPagina;
 		this.iFis = new int[tamPagina];
 		this.iVirt = new int[tamPagina];
@@ -122,14 +119,6 @@ public class Pagina {
 		this.bitResidencia = bitResidencia;
 	}
 
-	public String getIdProcesso() {
-		return idProcesso;
-	}
-
-	public void setIdProcesso(String idProcesso) {
-		this.idProcesso = idProcesso;
-	}
-
 	public int[] getiFis() {
 		return iFis;
 	}
@@ -156,14 +145,6 @@ public class Pagina {
 
 	public boolean getBitResidencia(){
 		return bitResidencia;
-	}
-
-	public String getProcesso() {
-		return idProcesso;
-	}
-
-	public void setProcesso(String idProcesso) {
-		this.idProcesso = idProcesso;
 	}
 
 	public String getIdPagina() {
