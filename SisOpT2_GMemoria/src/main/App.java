@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -40,7 +41,7 @@ public class App {
 	private static Pagina[] memFisica;
 
 	private static Map<String, Processo> processos = new HashMap<>();
-	private static Map<String, Pagina> tabelaDePaginas = new HashMap<>();
+	private static Map<String, Pagina> tabelaDePaginas = new LinkedHashMap<>();
 
 	public static void main(String[] args) {
 		load("teste2.txt");
@@ -109,33 +110,39 @@ public class App {
 			System.err.println("ERRO: Processo " + idProcesso + " nao existe!");
 			return;
 		}
+		// Confere se o a pagina existe na memoria
 		if (processos.get(idProcesso).getTamProcesso() < tamProcesso || tamProcesso < 0) {
 			System.err.println("ERRO: Acesso a pagina inexistente: '" + tamProcesso + "' do processo: '" + idProcesso);
 			return;
 		}
 
+		// Constroi o id da pagina para acessa-la na tabela de paginas
 		int nPagina = (int) Math.ceil(tamProcesso / (double) tamPagina);
 		String idPagina = idProcesso + nPagina;
 		Pagina p = tabelaDePaginas.get(idPagina);
 
-		if (p.getBitResidencia()) {
-			p.setContadorLRU(p.getContadorLRU() + 1);
-		} else {
+		// Se estiver na memoria fisica, soh atualiza o contador LRU refente na Tabela
+		if (!p.getBitResidencia()) { // Se nao estiver, page fault e faz swap para memoria fisica
 			System.out.println("Page Fault");
-			Pagina pComMenorValor;
+			Pagina pComMenorValor = null;
 			int menorC = Integer.MAX_VALUE;
 			for (Map.Entry<String, Pagina> entry : tabelaDePaginas.entrySet()) {
-				if (p.getBitResidencia()) {
-					Pagina entryValue = entry.getValue();
+				Pagina entryValue = entry.getValue();
+				if (entryValue.getBitResidencia()) {
 					if (entryValue.getContadorLRU() < menorC) {
-						menorC = entryValue.getContadorLRU();
+						menorC = entryValue.getContadorLRU();						
 						pComMenorValor = entryValue;
 					}
 				}
 			}
+			if (pComMenorValor == null)
+				System.err.println("ERRO: Pagina com Menor valor Cont nao encontrada! " + p.getIdPagina());
+			else {
+				p.swap(memFisica, memVirtual, pComMenorValor.getiFis()[0], pComMenorValor);
+			}
 		}
-		
-		
+		p.setContadorLRU(p.getContadorLRU() + 1);
+
 	}
 
 	private static void criaProcesso(String idProcesso, int tamProcesso) {

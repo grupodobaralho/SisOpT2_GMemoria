@@ -10,3 +10,11 @@ C p4 16
 C p5 8
 C p6 8
 C p7 8
+A p3 15
+A p3 2
+A p1 8
+A p2 8
+A p3 5
+A p4 9
+A p6 2
+A p1 9

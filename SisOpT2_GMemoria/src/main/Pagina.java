@@ -81,7 +81,32 @@ public class Pagina {
 		mAloc += mAlocExtra;		
 	}
 	
+	//realoca todo o processo para a outra memoria
+	public void swap(Pagina[] memFisica, Pagina[] memVirtual, int novoIndice, Pagina outra) {
 		
+		int primeiroIndiceAtual;
+		
+		if(bitResidencia) {
+			primeiroIndiceAtual = iFis[0];
+			for (int i = 0; i < iFis.length; i++) {
+				memVirtual[novoIndice+i] = memFisica[iFis[i]];
+				memFisica[iFis[i]] = null;
+			}
+			bitResidencia = false;
+			if(outra !=null)
+				outra.adicionaMemoriaFisica(primeiroIndiceAtual, memFisica);
+			
+		} else {
+			primeiroIndiceAtual = iVirt[0];
+			for (int i = 0; i < iVirt.length; i++) {
+				memFisica[novoIndice+i] = memVirtual[iVirt[i]];
+				memVirtual[iVirt[i]] = null;
+			}
+			bitResidencia = true;
+			if(outra !=null)
+				outra.adicionaMemoriaVirtual(primeiroIndiceAtual, memVirtual);
+		}
+	}
 	
 	public int getContadorLRU() {
 		return contadorLRU;
