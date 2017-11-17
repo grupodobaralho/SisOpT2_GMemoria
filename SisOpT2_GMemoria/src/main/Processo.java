@@ -9,12 +9,12 @@ public class Processo {
 
 	private String id;
 	private int tamProcesso;
-	private Set<String> paginas;
+	private List<String> paginas;
 
 	public Processo(String id, int tamProcesso) {
 		this.id = id;
 		this.tamProcesso = tamProcesso;
-		paginas = new HashSet<>();
+		paginas = new ArrayList<>();
 	}
 	
 	public void addPagina(String idPagina) {
@@ -23,6 +23,10 @@ public class Processo {
 	
 	public int getQntPag() {
 		return paginas.size();
+	}
+	
+	public String getIdUltimaPag() {
+		return paginas.get(paginas.size()-1);
 	}
 	
 	public String getId() {

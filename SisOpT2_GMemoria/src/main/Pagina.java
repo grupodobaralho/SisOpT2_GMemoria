@@ -66,19 +66,20 @@ public class Pagina {
 		}
 	}
 
-	public void alocaExtra(int mAlocExtra, Pagina[] memoria) {
+	public void alocaMemExtra(int mAlocExtra, Pagina[] memoria) {
 		if(bitResidencia) {
-			for(int i=mAloc; i<mAlocExtra; i++) {
-				iFis[i] = iFis[mAloc-1] +1;
-				memoria[iFis[i]] = this;
+			for(int i=0; i<mAlocExtra; i++) {
+				iFis[mAloc+i] = iFis[mAloc-1] +1;
+				memoria[iFis[mAloc+i]] = this;
+				mAloc++;
 			}
 		} else{
-			for(int i=mAloc; i<mAlocExtra; i++) {
-				iVirt[i] = iVirt[mAloc-1] +1;
-				memoria[iVirt[i]] = this;	
+			for(int i=0; i<mAlocExtra; i++) {
+				iVirt[mAloc+i] = iVirt[mAloc-1] +1;
+				memoria[iVirt[mAloc+i]] = this;	
+				mAloc++;
 			}
-		}
-		mAloc += mAlocExtra;		
+		}	
 	}
 	
 	//realoca todo o processo para a outra memoria
@@ -107,6 +108,7 @@ public class Pagina {
 				outra.adicionaMemoriaVirtual(primeiroIndiceAtual, memVirtual);
 		}
 	}
+	
 	
 	public int getContadorLRU() {
 		return contadorLRU;

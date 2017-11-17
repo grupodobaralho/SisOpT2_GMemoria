@@ -25,9 +25,7 @@ public class App {
 
 	private static String tipoEntrada;
 	private static String tipoAlgTroca;
-	// o tamPagina eh double para facilitar arredondamento para cima apos
-	// divisao
-	// matematica
+
 	private static int tamPagina;
 	private static int tamMemFisica;
 	private static int tamMemVirtual;
@@ -50,8 +48,6 @@ public class App {
 
 	}
 
-	// Método que chama o Sistema Operacional para fazer a leitura dos dados do
-	// arquivo .txt
 	public static void load(String arquivo) {
 		Path path = Paths.get(arquivo);
 		try (Scanner sc = new Scanner(Files.newBufferedReader(path, Charset.forName("utf8")))) {
@@ -100,7 +96,29 @@ public class App {
 
 	}
 
-	private static void alocaMemoria(String idProcesso, int tamProcesso) {
+	private static void alocaMemoria(String idProcesso, int qntExtra) {
+		// Confere se o processo existe na memoria
+		if (!processos.containsKey(idProcesso)) {
+			System.err.println("ERRO: Processo " + idProcesso + " nao existe!");
+			return;
+		}
+
+		// Captura o tamanho disponivel da ultima pagina de um processo
+		String idUltimaPagina = processos.get(idProcesso).getIdUltimaPag();
+		Pagina p = tabelaDePaginas.get(idUltimaPagina);
+		int espDisponivel = tamPagina - p.getmAloc();
+
+		// Se houver espaco disponivel, aloca ateh o maximo e cria paginas extras se for
+		// necessario
+		if (espDisponivel > 0) {
+			if (espDisponivel >= qntExtra) {
+				p.alocaMemExtra(qntExtra, memFisica);
+			} else {
+				p.alocaMemExtra(espDisponivel, memFisica);
+				qntExtra -= espDisponivel;
+				criaPagina(idProcesso, qntExtra);
+			}
+		}
 
 	}
 
@@ -112,7 +130,8 @@ public class App {
 		}
 		// Confere se o a pagina existe na memoria
 		if (processos.get(idProcesso).getTamProcesso() < tamProcesso || tamProcesso < 0) {
-			System.err.println("ERRO: Acesso a pagina inexistente: '" + tamProcesso + "' do processo: '" + idProcesso);
+			System.err.println("ERRO: Acesso a pagina inexistente: '" + tamProcesso + "' do processo: '" + idProcesso
+					+ "Cujo tamanho eh: " + processos.get(idProcesso).getTamProcesso());
 			return;
 		}
 
@@ -130,7 +149,7 @@ public class App {
 				Pagina entryValue = entry.getValue();
 				if (entryValue.getBitResidencia()) {
 					if (entryValue.getContadorLRU() < menorC) {
-						menorC = entryValue.getContadorLRU();						
+						menorC = entryValue.getContadorLRU();
 						pComMenorValor = entryValue;
 					}
 				}
@@ -147,18 +166,21 @@ public class App {
 
 	private static void criaProcesso(String idProcesso, int tamProcesso) {
 
-		int tamNeces = (int) (tamProcesso / (double) tamPagina);
 		// Verifica se ha espaco para o processo
-		// System.out.println(nFramesDisp + " " + tamNeces + " " + nPaginasDisp
-		// + " " + tamNeces);
+		int tamNeces = (int) (tamProcesso / (double) tamPagina);
 		if (nFramesDisp < tamNeces && nPaginasDisp < tamNeces) {
 			System.err.println("Nao foi possivel adicionar processo " + idProcesso + ": Memoria cheia!");
 			return;
 		}
-
 		Processo proc = new Processo(idProcesso, tamProcesso);
+		processos.put(proc.getId(), proc);
+		criaPagina(idProcesso, tamProcesso);
+
+	}
+
+	private static void criaPagina(String idProcesso, int qntAloc) {
 		int contIdPagina = 1;
-		int tamProcessoAux = tamProcesso;
+		int tamProcessoAux = qntAloc;
 		// While, enquanto nao forem criadas todas paginas para o processo
 		while (!(tamProcessoAux <= 0)) {
 
@@ -171,7 +193,7 @@ public class App {
 			else
 				mAloc = tamPagina + mAloc;
 
-			// Pagina eh criada recebendo as informacoes (incluindo qunto de seu
+			// Pagina eh criada recebendo as informacoes (incluindo quanto de seu
 			// espaço sera usado)
 			Pagina pag = new Pagina(idProcesso, idProcesso + contIdPagina, tamPagina, mAloc);
 
@@ -209,12 +231,9 @@ public class App {
 				nFramesDisp--;
 			}
 
-			proc.addPagina(pag.getIdPagina());
+			processos.get(idProcesso).addPagina(pag.getIdPagina());
 			contIdPagina++;
 		}
-		processos.put(proc.getId(), proc);
-		// System.out.println(proc);
-
 	}
 
 	public static void printa() {
