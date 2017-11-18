@@ -33,7 +33,10 @@ public class Pagina {
 		public Empty(String idPagina, boolean bitResidencia) {
 			this.idPagina=idPagina;
 			this.bitResidencia=bitResidencia;
-		}		
+		}
+		public String getIdPagina() {
+			return idPagina;
+		}
 		public String toString() {
 			return idPagina+ " " + bitResidencia + " "+"VAZIO";
 		}
@@ -65,18 +68,16 @@ public class Pagina {
 
 	public void alocaMemExtra(int mAlocExtra, Pagina[] memoria) {
 		if(bitResidencia) {
-			for(int i=0; i<mAlocExtra; i++) {
-				iFis[mAloc+i] = iFis[mAloc-1] +1;
+			for(int i=0; i<mAlocExtra; i++) {			
 				memoria[iFis[mAloc+i]] = this;
-				mAloc++;
+				
 			}
 		} else{
 			for(int i=0; i<mAlocExtra; i++) {
-				iVirt[mAloc+i] = iVirt[mAloc-1] +1;
 				memoria[iVirt[mAloc+i]] = this;	
-				mAloc++;
 			}
-		}	
+		}
+		mAloc =+ mAlocExtra;
 	}
 	
 	//realoca todo o processo para a outra memoria
@@ -89,6 +90,7 @@ public class Pagina {
 			for (int i = 0; i < iFis.length; i++) {
 				memVirtual[novoIndice+i] = memFisica[iFis[i]];
 				memFisica[iFis[i]] = null;
+				iVirt[i] = novoIndice + i;
 			}
 			bitResidencia = false;
 			if(outra !=null)
@@ -99,6 +101,7 @@ public class Pagina {
 			for (int i = 0; i < iVirt.length; i++) {
 				memFisica[novoIndice+i] = memVirtual[iVirt[i]];
 				memVirtual[iVirt[i]] = null;
+				iFis[i] = novoIndice + i;
 			}
 			bitResidencia = true;
 			if(outra !=null)
@@ -156,7 +159,7 @@ public class Pagina {
 	}
 	
 	public String toString() {
-		return idPagina+ " " +bitResidencia+ " "+mAloc;
+		return idPagina+ " " +bitResidencia+ " "+mAloc + " Ivirt: "+iVirt[0]+ " "+ iFis[0];
 	}
 
 }

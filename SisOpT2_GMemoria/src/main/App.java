@@ -11,6 +11,7 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -30,11 +31,9 @@ public class App {
 	private static int tamMemFisica;
 	private static int tamMemVirtual;
 
-	private static int contMemVitual = 0;
 	private static int nPaginasDisp = 0;
 	private static Pagina[] memVirtual;
 
-	private static int contMemFisica = 0;
 	private static int nFramesDisp = 0;
 	private static Pagina[] memFisica;
 
@@ -42,7 +41,7 @@ public class App {
 	private static Map<String, Pagina> tabelaDePaginas = new LinkedHashMap<>();
 
 	public static void main(String[] args) {
-		load("meuteste.txt");
+		load("testeLimpo.txt");
 		// System.out.println(processos);
 		printa();
 
@@ -102,6 +101,7 @@ public class App {
 			System.err.println("ERRO: Processo " + idProcesso + " nao existe!");
 			return;
 		}
+		processos.get(idProcesso).aumentaTamProcesso(qntExtra);
 
 		// Captura o tamanho disponivel da ultima pagina de um processo
 		String idUltimaPagina = processos.get(idProcesso).getIdUltimaPag();
@@ -112,13 +112,17 @@ public class App {
 		// necessario
 		if (espDisponivel > 0) {
 			if (espDisponivel >= qntExtra) {
+				System.out.println(idProcesso + " aaa " + espDisponivel + " " + qntExtra + " " + p);
 				p.alocaMemExtra(qntExtra, memFisica);
 			} else {
 				p.alocaMemExtra(espDisponivel, memFisica);
 				qntExtra -= espDisponivel;
 				criaPagina(idProcesso, qntExtra);
 			}
+		} else {
+			criaPagina(idProcesso, qntExtra);
 		}
+		p.setContadorLRU(p.getContadorLRU() + 1);
 
 	}
 
@@ -140,32 +144,49 @@ public class App {
 		String idPagina = idProcesso + nPagina;
 		Pagina p = tabelaDePaginas.get(idPagina);
 
-		// Se nao estiver na memoria fisica, page fault e faz swap para memoria fisica 
+		// Se nao estiver na memoria fisica, page fault e faz swap para memoria fisica
 		if (!p.getBitResidencia()) {
 			pageFault(p);
 		}
-		//Atualiza o contador LRU refente na Tabela
+		// Atualiza o contador LRU refente na Tabela
 		p.setContadorLRU(p.getContadorLRU() + 1);
 
 	}
-	
+
 	private static void pageFault(Pagina p) {
+
 		System.out.println("Page Fault");
-		Pagina pComMenorValor = null;
-		int menorC = Integer.MAX_VALUE;
-		for (Map.Entry<String, Pagina> entry : tabelaDePaginas.entrySet()) {
-			Pagina entryValue = entry.getValue();
-			if (entryValue.getBitResidencia()) {
-				if (entryValue.getContadorLRU() < menorC) {
-					menorC = entryValue.getContadorLRU();
-					pComMenorValor = entryValue;
+		Pagina pagEscolhida = null;
+
+		if (tipoAlgTroca.equals("lru")) {
+			System.out.println("OIoiOioIOi");
+			int menorC = Integer.MAX_VALUE;
+			for (Map.Entry<String, Pagina> entry : tabelaDePaginas.entrySet()) {
+				Pagina entryValue = entry.getValue();
+				if (entryValue.getBitResidencia()) {
+					if (entryValue.getContadorLRU() < menorC) {
+						menorC = entryValue.getContadorLRU();
+						pagEscolhida = entryValue;
+						System.out.println("Bug: " + pagEscolhida);
+					}
 				}
 			}
-		}
-		if (pComMenorValor == null)
+		} else if (tipoAlgTroca.equals("aleatorio")) {
+			System.out.println("ALALALALALA");
+			Random generator = new Random();
+			while(pagEscolhida==null) {
+				int i = generator.nextInt(memFisica.length);
+				if(memFisica[i] != null)
+					pagEscolhida = tabelaDePaginas.get(memFisica[i].getIdPagina());
+			}
+		} else
+			System.err.println("ERRO: Erro na escolha do algoritmo de substituicao");
+			
+		
+		if (pagEscolhida == null)
 			System.err.println("ERRO: Pagina com Menor valor Cont nao encontrada! " + p.getIdPagina());
 		else {
-			p.swap(memFisica, memVirtual, pComMenorValor.getiFis()[0], pComMenorValor);
+			p.swap(memFisica, memVirtual, pagEscolhida.getiFis()[0], pagEscolhida);
 		}
 	}
 
@@ -184,7 +205,7 @@ public class App {
 	}
 
 	private static void criaPagina(String idProcesso, int qntAloc) {
-		int contIdPagina = 0;
+		int contIdPagina = processos.get(idProcesso).getQntPag();
 		int tamProcessoAux = qntAloc;
 		// While, enquanto nao forem criadas todas paginas para o processo
 		while (!(tamProcessoAux <= 0)) {
@@ -202,10 +223,11 @@ public class App {
 			Pagina pag = new Pagina(idProcesso + contIdPagina, tamPagina, mAloc);
 
 			// Verifica e nao permite criar pagina que jah exista
-			if (tabelaDePaginas.containsKey(pag.getIdPagina())) {
-				System.err.println("Tentou adicionar uma pagina que ja existe: " + pag.getIdPagina());
-				System.exit(1);
-			}
+			// if (tabelaDePaginas.containsKey(pag.getIdPagina())) {
+			// System.err.println("Tentou adicionar uma pagina que ja existe: " +
+			// pag.getIdPagina());
+			// System.exit(1);
+			// }
 
 			// Adiciona a Pagina na tabela de paginas
 			tabelaDePaginas.put(pag.getIdPagina(), pag);
@@ -227,6 +249,10 @@ public class App {
 						indice = i;
 						break;
 					}
+				}
+				if (indice == -1) {
+					System.err.println("MEMORIA CHEIA: Nao foi possivel alocar memoria para " + idProcesso);
+					break;
 				}
 				pag.adicionaMemoriaVirtual(indice, memVirtual);
 				pageFault(pag);

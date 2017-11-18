@@ -16,27 +16,31 @@ public class Processo {
 		this.tamProcesso = tamProcesso;
 		paginas = new ArrayList<>();
 	}
-	
+
 	public void addPagina(String idPagina) {
 		paginas.add(idPagina);
 	}
-	
+
 	public int getQntPag() {
 		return paginas.size();
 	}
-	
+
 	public String getIdUltimaPag() {
-		return paginas.get(paginas.size()-1);
+		return paginas.get(paginas.size() - 1);
 	}
-	
+
 	public String getId() {
 		return id;
 	}
-	
-	public int getTamProcesso(){
+
+	public int getTamProcesso() {
 		return tamProcesso;
 	}
-	
+
+	public void aumentaTamProcesso(int tamExtra) {
+		this.tamProcesso += tamExtra;
+	}
+
 	@Override
 	public String toString() {
 		return "Processo [id=" + id + ", tamProcesso=" + tamProcesso + ", paginas=" + paginas.size() + "]";

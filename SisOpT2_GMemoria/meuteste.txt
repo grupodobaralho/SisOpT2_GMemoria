@@ -6,6 +6,7 @@ lru
 C p1 16 
 C p2 6
 A p1 15
-A p1 4
-A p1 8
 C p3 8
+A p1 4
+A p2 5
+A p3 1
