@@ -5,12 +5,28 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Trabalho 2 - Gerencia de Memoria
+ * 
+ * @author Israel Deorce Vieira Júnior (16104279-1)
+ * @date 21/11/2017
+ * @class Sistemas Operacionais
+ * @professor Avelino Zorzo
+ * 
+ */
 public class Processo {
 
 	private String id;
 	private int tamProcesso;
 	private List<String> paginas;
 
+	/**
+	 * Um processo possui um ID, um tamanho total e uma lista para identificar as
+	 * suas paginas referentes.
+	 * 
+	 * @param id
+	 * @param tamProcesso
+	 */
 	public Processo(String id, int tamProcesso) {
 		this.id = id;
 		this.tamProcesso = tamProcesso;

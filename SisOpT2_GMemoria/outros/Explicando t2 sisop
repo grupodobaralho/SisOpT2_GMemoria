@@ -16,4 +16,4 @@ M = mudanca de um processo (precisar de mais memoria).
 Tabela de bits = utilizando bloco eh mais interessante
                - para isso usamos linked list, em que cada posicao contem um endereco inicial e um final. Assim que alocamos um pedaco do bloco, aloteramos o endereco inicial.
 
-Tanto C, A e M podem gerar paga foult
+Tanto C, A e M podem gerar paga fault

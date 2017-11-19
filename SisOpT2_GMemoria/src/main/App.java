@@ -7,47 +7,54 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Set;
 
 /**
- * obj memoria principal, obj processos???
+ * Trabalho 2 - Gerencia de Memoria
  * 
- * @author IsraelDeorce
- *
- *         A -> Acessa memória C -> Criar o processo M -> Aloca Memória
+ * @author Israel Deorce Vieira Júnior (16104279-1)
+ * @date 21/11/2017
+ * @class Sistemas Operacionais
+ * @professor Avelino Zorzo
+ * 
  */
 public class App {
 
+	// Tipo de entrada, algoritmo de troca e tamanho fixo das paginas
 	private static String tipoEntrada;
 	private static String tipoAlgTroca;
-
 	private static int tamPagina;
-	private static int tamMemFisica;
-	private static int tamMemVirtual;
 
-	private static int nPaginasDisp = 0;
+	// Memoria virtual e atributos de paginas
 	private static Pagina[] memVirtual;
+	private static int tamMemVirtual;
+	private static int nPaginasDisp = 0;
 
-	private static int nFramesDisp = 0;
+	// Memoria física e atributos de frames
 	private static Pagina[] memFisica;
+	private static int tamMemFisica;
+	private static int nFramesDisp = 0;
 
+	// Lista de Processos no sistema e tabela de páginas
 	private static Map<String, Processo> processos = new HashMap<>();
 	private static Map<String, Pagina> tabelaDePaginas = new LinkedHashMap<>();
 
+	/**
+	 * O metodo main carrega o arquivo epossui um while com um switch case que
+	 * decide qual acao deverah ser tomada, levando em consideracao o COMANDO lido
+	 * no arquivo. O formado de cada instrucao deve ser: COMANDO IDPROCESSO VALOR
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		load("testeLimpo.txt");
-		// System.out.println(processos);
-		printa();
 
-	}
+		// nome do arquivo
+		String arquivo = "testeLimpo.txt";
 
-	public static void load(String arquivo) {
 		Path path = Paths.get(arquivo);
 		try (Scanner sc = new Scanner(Files.newBufferedReader(path, Charset.forName("utf8")))) {
 			tipoEntrada = sc.next();
@@ -61,25 +68,28 @@ public class App {
 			memVirtual = new Pagina[tamMemVirtual];
 			memFisica = new Pagina[tamMemFisica];
 
-			// System.out.println(tipoEntrada);
-			// System.out.println(tipoAlgTroca);
-			// System.out.println(tamPagina);
-			// System.out.println(tamMemFis);
-			// System.out.println(tamMemVirtual);
-
 			while (sc.hasNext()) {
 				String comando = sc.next();
 				String idProcesso = sc.next();
 				int tamProcesso = Integer.parseInt(sc.next());
 				switch (comando) {
 				case "C":
+					System.out.println("Cria Processo " + idProcesso + " " + tamProcesso);
 					criaProcesso(idProcesso, tamProcesso);
+					// Se o tipo de entrada for aleatorio, ele cria a Thread para o processo.
+					if (tipoEntrada.equals("aleatorio")) {
+						ThreadProcesso threadP = new ThreadProcesso("#Thread" + idProcesso, processos.get(idProcesso));
+					}
 					break;
 				case "A":
-					acessaMemoria(idProcesso, tamProcesso);
+					System.out.println("Acesso " + idProcesso + " " + tamProcesso);
+					if (!tipoEntrada.equals("aleatorio"))
+						acessaMemoria(idProcesso, tamProcesso);
 					break;
 				case "M":
-					alocaMemoria(idProcesso, tamProcesso);
+					System.out.println("MemAloc " + idProcesso + " " + tamProcesso);
+					if (!tipoEntrada.equals("aleatorio"))
+						alocaMemoria(idProcesso, tamProcesso);
 					break;
 				default:
 					System.out.println("Erro na seleção do comando");
@@ -93,118 +103,45 @@ public class App {
 			e1.printStackTrace();
 		}
 
+		// printa();
 	}
 
-	private static void alocaMemoria(String idProcesso, int qntExtra) {
-		// Confere se o processo existe na memoria
-		if (!processos.containsKey(idProcesso)) {
-			System.err.println("ERRO: Processo " + idProcesso + " nao existe!");
-			return;
-		}
-		processos.get(idProcesso).aumentaTamProcesso(qntExtra);
+	/**
+	 * Metodo chamado quando se deseja criar um novo processo
+	 * 
+	 * @param idProcesso
+	 *            (Identifica o novo processo)
+	 * @param tamProcesso
+	 *            (tamanho total inicial do novo processo)
+	 */
+	public synchronized static void criaProcesso(String idProcesso, int tamProcesso) {
 
-		// Captura o tamanho disponivel da ultima pagina de um processo
-		String idUltimaPagina = processos.get(idProcesso).getIdUltimaPag();
-		Pagina p = tabelaDePaginas.get(idUltimaPagina);
-		int espDisponivel = tamPagina - p.getmAloc();
-
-		// Se houver espaco disponivel, aloca ateh o maximo e cria paginas extras se for
-		// necessario
-		if (espDisponivel > 0) {
-			if (espDisponivel >= qntExtra) {
-				System.out.println(idProcesso + " aaa " + espDisponivel + " " + qntExtra + " " + p);
-				p.alocaMemExtra(qntExtra, memFisica);
-			} else {
-				p.alocaMemExtra(espDisponivel, memFisica);
-				qntExtra -= espDisponivel;
-				criaPagina(idProcesso, qntExtra);
-			}
-		} else {
-			criaPagina(idProcesso, qntExtra);
-		}
-		p.setContadorLRU(p.getContadorLRU() + 1);
-
-	}
-
-	private static void acessaMemoria(String idProcesso, int tamProcesso) {
-		// Confere se o processo existe na memoria
-		if (!processos.containsKey(idProcesso)) {
-			System.err.println("ERRO: Processo " + idProcesso + " nao existe!");
-			return;
-		}
-		// Confere se o a pagina existe na memoria
-		if (processos.get(idProcesso).getTamProcesso() <= tamProcesso || tamProcesso < 0) {
-			System.err.println("ERRO: Acesso a pagina inexistente: '" + tamProcesso + "' do processo: '" + idProcesso
-					+ " cujo tamanho eh: " + processos.get(idProcesso).getTamProcesso());
-			return;
-		}
-
-		// Constroi o id da pagina para acessa-la na tabela de paginas
-		int nPagina = (int) Math.floor(tamProcesso / (double) tamPagina);
-		String idPagina = idProcesso + nPagina;
-		Pagina p = tabelaDePaginas.get(idPagina);
-
-		// Se nao estiver na memoria fisica, page fault e faz swap para memoria fisica
-		if (!p.getBitResidencia()) {
-			pageFault(p);
-		}
-		// Atualiza o contador LRU refente na Tabela
-		p.setContadorLRU(p.getContadorLRU() + 1);
-
-	}
-
-	private static void pageFault(Pagina p) {
-
-		System.out.println("Page Fault");
-		Pagina pagEscolhida = null;
-
-		if (tipoAlgTroca.equals("lru")) {
-			System.out.println("OIoiOioIOi");
-			int menorC = Integer.MAX_VALUE;
-			for (Map.Entry<String, Pagina> entry : tabelaDePaginas.entrySet()) {
-				Pagina entryValue = entry.getValue();
-				if (entryValue.getBitResidencia()) {
-					if (entryValue.getContadorLRU() < menorC) {
-						menorC = entryValue.getContadorLRU();
-						pagEscolhida = entryValue;
-						System.out.println("Bug: " + pagEscolhida);
-					}
-				}
-			}
-		} else if (tipoAlgTroca.equals("aleatorio")) {
-			System.out.println("ALALALALALA");
-			Random generator = new Random();
-			while(pagEscolhida==null) {
-				int i = generator.nextInt(memFisica.length);
-				if(memFisica[i] != null)
-					pagEscolhida = tabelaDePaginas.get(memFisica[i].getIdPagina());
-			}
-		} else
-			System.err.println("ERRO: Erro na escolha do algoritmo de substituicao");
-			
-		
-		if (pagEscolhida == null)
-			System.err.println("ERRO: Pagina com Menor valor Cont nao encontrada! " + p.getIdPagina());
-		else {
-			p.swap(memFisica, memVirtual, pagEscolhida.getiFis()[0], pagEscolhida);
-		}
-	}
-
-	private static void criaProcesso(String idProcesso, int tamProcesso) {
-
-		// Verifica se ha espaco para o processo
+		// Verifica se existe espaco para o novo processo
 		int tamNeces = (int) (tamProcesso / (double) tamPagina);
 		if (nFramesDisp < tamNeces && nPaginasDisp < tamNeces) {
-			System.err.println("Nao foi possivel adicionar processo " + idProcesso + ": Memoria cheia!");
+			System.out.println("ERRO: Nao foi possivel adicionar processo " + idProcesso + ": Memoria cheia!");
 			return;
 		}
+
+		// Havendo espaco para o novo processo: ele é criado, incluido na tabela de
+		// processos e o processo de criacao das paginas referentes eh iniciado.
 		Processo proc = new Processo(idProcesso, tamProcesso);
 		processos.put(proc.getId(), proc);
 		criaPagina(idProcesso, tamProcesso);
 
 	}
 
-	private static void criaPagina(String idProcesso, int qntAloc) {
+	/**
+	 * Metodo chamado quando se deseja criar uma ou mais paginas para um determinado
+	 * processo
+	 * 
+	 * @param idProcesso
+	 *            (Identifica o processo que receberah as paginas)
+	 * @param qntAloc
+	 *            (tamanho total de bits que deverao ser distribuidos entre as
+	 *            paginas)
+	 */
+	public synchronized static void criaPagina(String idProcesso, int qntAloc) {
 		int contIdPagina = processos.get(idProcesso).getQntPag();
 		int tamProcessoAux = qntAloc;
 		// While, enquanto nao forem criadas todas paginas para o processo
@@ -221,13 +158,6 @@ public class App {
 
 			// Pagina eh criada recebendo idPagina, tamanho e qnt memoria a ser alocada
 			Pagina pag = new Pagina(idProcesso + contIdPagina, tamPagina, mAloc);
-
-			// Verifica e nao permite criar pagina que jah exista
-			// if (tabelaDePaginas.containsKey(pag.getIdPagina())) {
-			// System.err.println("Tentou adicionar uma pagina que ja existe: " +
-			// pag.getIdPagina());
-			// System.exit(1);
-			// }
 
 			// Adiciona a Pagina na tabela de paginas
 			tabelaDePaginas.put(pag.getIdPagina(), pag);
@@ -251,7 +181,7 @@ public class App {
 					}
 				}
 				if (indice == -1) {
-					System.err.println("MEMORIA CHEIA: Nao foi possivel alocar memoria para " + idProcesso);
+					System.out.println("ERRO: Nao foi possivel alocar memoria para " + idProcesso + ": Memoria Cheia");
 					break;
 				}
 				pag.adicionaMemoriaVirtual(indice, memVirtual);
@@ -267,34 +197,195 @@ public class App {
 		}
 	}
 
-	public static void printa() {
-		System.out.println("### Estado da memoria Fisica ###");
-		System.out.println("Indice - idFrame - naMemFisica? - memEmUsoDoFrame");
-		for (int i = 0; i < memFisica.length; i++) {
-			if (memFisica[i] == null)
-				System.out.println(i + "->" + "VAZIO");
-			else
-				System.out.println(i + "->" + memFisica[i]);
+	/**
+	 * Metodo chamado quando se deseja acessar uma pagina especifica de um processo
+	 * 
+	 * @param idProcesso
+	 *            (qual o processo que serah acessado)
+	 * @param tamProcesso
+	 *            (numero do bit do processo a ser acessado. O bit especifico e a
+	 *            pagina serao calculados a partir deste parametro.
+	 */
+	public synchronized static void acessaMemoria(String idProcesso, int tamProcesso) {
+
+		// Confere se o processo existe na memoria
+		if (!processos.containsKey(idProcesso)) {
+			System.out.println("ERRO: Processo " + idProcesso + " nao existe!");
+			return;
 		}
-		System.out.println("\n### Estado da memoria Virtual ###");
-		System.out.println("Indice - idPagina - naMemFisica? - memEmUsoDaPagina");
-		for (int i = 0; i < memVirtual.length; i++) {
-			if (memVirtual[i] == null)
-				System.out.println(i + "->" + "VAZIO");
-			else
-				System.out.println(i + "->" + memVirtual[i]);
+
+		// Confere se o a pagina existe na memoria
+		if (processos.get(idProcesso).getTamProcesso() <= tamProcesso || tamProcesso < 0) {
+			System.out.println("ERRO: Acesso a pagina inexistente: '" + tamProcesso + "' do processo: '" + idProcesso
+					+ " cujo tamanho eh: " + processos.get(idProcesso).getTamProcesso());
+			return;
 		}
-		System.out.println("\n### Tabela de Paginas ###");
-		System.out.println("idPagina - naMemFisica? - indice - cLRU");
+
+		// Constroi o id da pagina para acessa-la na tabela de paginas
+		int nPagina = (int) Math.floor(tamProcesso / (double) tamPagina);
+		String idPagina = idProcesso + nPagina;
+		Pagina p = tabelaDePaginas.get(idPagina);
+
+		// Se nao estiver na memoria fisica, é page fault e faz swap para memoria fisica
+		if (!p.getBitResidencia()) {
+			pageFault(p);
+		}
+
+		// Atualiza o contador LRU refente na Tabela, pois ela fora referenciada.
+		p.setContadorLRU(p.getContadorLRU() + 1);
+
+	}
+
+	/**
+	 * Metodo chamado quando se deseja alocar memoria extra para um determinado
+	 * processo
+	 * 
+	 * @param idProcesso
+	 *            (Identifica o processo que deverah receber memoria extra)
+	 * @param qntExtra
+	 *            (tamanho total de bits que deverao ser incrementados ao processo e
+	 *            distribuidos entre as paginas. Se for necessario, outra pagina
+	 *            serah criada.)
+	 */
+	public synchronized static void alocaMemoria(String idProcesso, int qntExtra) {
+		// Confere se o processo existe na memoria
+		if (!processos.containsKey(idProcesso)) {
+			System.out.println("ERRO: Processo " + idProcesso + " nao existe!");
+			return;
+		}
+		processos.get(idProcesso).aumentaTamProcesso(qntExtra);
+
+		// Captura o tamanho disponivel da ultima pagina de um processo
+		String idUltimaPagina = processos.get(idProcesso).getIdUltimaPag();
+		Pagina p = tabelaDePaginas.get(idUltimaPagina);
+		int espDisponivel = tamPagina - p.getmAloc();
+
+		// Se houver espaco disponivel, aloca ateh o maximo e cria paginas extras se for
+		// necessario
+		if (espDisponivel > 0) {
+			if (espDisponivel >= qntExtra) {
+				p.alocaMemExtra(qntExtra, memFisica);
+			} else {
+				p.alocaMemExtra(espDisponivel, memFisica);
+				qntExtra -= espDisponivel;
+				criaPagina(idProcesso, qntExtra);
+			}
+		} else {
+			criaPagina(idProcesso, qntExtra);
+		}
+		p.setContadorLRU(p.getContadorLRU() + 1);
+
+	}
+
+	/**
+	 * Metodo chamado para sinalizar pageFault e realizar swap de paginas. Ele
+	 * ocorre sempre que se tenta acessar uma pagina que esteja na memoria virtual e
+	 * nao na memoria fisica.
+	 * 
+	 * @param p
+	 *            (A pagina a ser transferida para a memoria fisica).
+	 */
+	public synchronized static void pageFault(Pagina p) {
+
+		System.out
+				.println("\n########### Page Fault da pagina " + p.getIdPagina() + "!! Estados antes do PageFault: \n");
+		printa();
+
+		Pagina pagEscolhida = null;
+
+		// Na politica de substituicao do algoritmo LRU, ele escolherah a pagina da
+		// tabela de paginas com o menor contador de acessos para ser substituida
+		// (Tanenbaum - Sistemas Operacionais Modernos, pg. 162).
+		if (tipoAlgTroca.equals("lru")) {
+			int menorC = Integer.MAX_VALUE;
+			for (Map.Entry<String, Pagina> entry : tabelaDePaginas.entrySet()) {
+				Pagina entryValue = entry.getValue();
+				if (entryValue.getBitResidencia()) {
+					if (entryValue.getContadorLRU() < menorC) {
+						menorC = entryValue.getContadorLRU();
+						pagEscolhida = entryValue;
+					}
+				}
+			}
+		} else if (tipoAlgTroca.equals("aleatorio")) {
+			// No aleatorio, utilizamos um gerador de numeros randomicos pra escolher uma
+			// pagina da memoria fisica para ser feito swap com a pagina p.
+			Random generator = new Random();
+			while (pagEscolhida == null) {
+				int i = generator.nextInt(memFisica.length);
+				if (memFisica[i] != null)
+					pagEscolhida = tabelaDePaginas.get(memFisica[i].getIdPagina());
+			}
+		} else
+			System.out.println("ERRO: Erro na escolha do algoritmo de substituicao");
+
+		// Se a pagina foi escolhida com sucesso, o swap eh feito passando a posicao
+		// inicial na memoria da pagina escolhida como novo indice inicial da pagina p e
+		// vice versa.
+		if (pagEscolhida == null)
+			System.out.println("ERRO: Pagina com Menor valor Cont nao encontrada! " + p.getIdPagina());
+		else {
+			p.swap(memFisica, memVirtual, pagEscolhida.getiFis()[0], pagEscolhida);
+		}
+
+		System.out.println("---Estados após o PageFault:\n");
+		printa();
+	}
+
+	/**
+	 * Metodo auxiliar para exibir o estado do programa no console. Em alguns pontos
+	 * foram feitos tratamentos custosos das estruturas do programa, mas isso foi
+	 * feito para permitir melhor visualização dos resultados.
+	 */
+	public synchronized static void printa() {
+		List<Pagina> listaP = new ArrayList<>();
 		tabelaDePaginas.forEach((key, value) -> {
-			int indiceMem = -1;
-			if (value.getBitResidencia())
-				indiceMem = value.getiFis()[0];
-			else
-				indiceMem = value.getiVirt()[0];
-			System.out.println(value.getIdPagina() + " " + value.getBitResidencia() + " " + indiceMem + " "
-					+ value.getContadorLRU());
+			listaP.add(value);
 		});
+
+		String format = "%-30s%-30s%s%n";
+		System.out.printf(format, "#Estado da memoria Fisica#", "\t\t#Tabela de Paginas#",
+				"\t#Estado da memoria Virtual#");
+		System.out.printf(
+				"i-IDpag-MemF?-mAloc-ponteiro[0]  \ti-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]\n");
+
+		for (int i = 0, j = 0, k = 0; i < memFisica.length || j < listaP.size()
+				|| k < memVirtual.length; i++, j++, k++) {
+
+			String mFisica, tPaginas, mVirtual;
+
+			if (i < memFisica.length) {
+				if (memFisica[i] == null)
+					mFisica = i + "->" + "VAZIO";
+				else
+					mFisica = i + "->" + memFisica[i];
+			} else {
+				mFisica = "";
+			}
+			if (j < listaP.size()) {
+				int indiceMem = -1;
+				if (listaP.get(j).getBitResidencia())
+					indiceMem = listaP.get(j).getiFis()[0];
+				else
+					indiceMem = listaP.get(j).getiVirt()[0];
+				tPaginas = j + "->" + listaP.get(j).getIdPagina() + "\t" + listaP.get(j).getBitResidencia() + "  "
+						+ indiceMem + "  " + listaP.get(j).getContadorLRU();
+			} else {
+				tPaginas = "";
+			}
+
+			if (k < memVirtual.length) {
+				if (memVirtual[i] == null)
+					mVirtual = "\t" + i + "->" + "VAZIO";
+				else
+					mVirtual = "\t" + i + "->" + memVirtual[i];
+			} else {
+				mVirtual = "";
+			}
+
+			System.out.printf(format, mFisica, tPaginas, mVirtual);
+		}
+		System.out.println("\n");
 	}
 
 }
