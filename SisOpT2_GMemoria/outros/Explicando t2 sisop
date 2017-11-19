@@ -2,7 +2,7 @@ LRU = retira a pagina que estiver mais tempo sem ser acessada.
     - eh por acesso
     - eh por pagina
 
-Entrada aleatoria = Devo criar um teste de forma aleatório.
+Entrada aleatoria = Devo criar um teste de forma aleatoria.
     Estrutura:
         aloca(x);
         while(true){

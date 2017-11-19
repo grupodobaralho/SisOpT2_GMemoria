@@ -25,23 +25,23 @@ import java.util.Scanner;
 public class App {
 
 	// Tipo de entrada, algoritmo de troca e tamanho fixo das paginas
-	private static String tipoEntrada;
-	private static String tipoAlgTroca;
-	private static int tamPagina;
+	public static String tipoEntrada;
+	public static String tipoAlgTroca;
+	public static int tamPagina;
 
 	// Memoria virtual e atributos de paginas
-	private static Pagina[] memVirtual;
-	private static int tamMemVirtual;
-	private static int nPaginasDisp = 0;
+	public static Pagina[] memVirtual;
+	public static int tamMemVirtual;
+	public static int nPaginasDisp = 0;
 
 	// Memoria física e atributos de frames
-	private static Pagina[] memFisica;
-	private static int tamMemFisica;
-	private static int nFramesDisp = 0;
+	public static Pagina[] memFisica;
+	public static int tamMemFisica;
+	public static int nFramesDisp = 0;
 
 	// Lista de Processos no sistema e tabela de páginas
-	private static Map<String, Processo> processos = new HashMap<>();
-	private static Map<String, Pagina> tabelaDePaginas = new LinkedHashMap<>();
+	public static Map<String, Processo> processos = new HashMap<>();
+	public static Map<String, Pagina> tabelaDePaginas = new LinkedHashMap<>();
 
 	/**
 	 * O metodo main carrega o arquivo epossui um while com um switch case que
@@ -52,8 +52,11 @@ public class App {
 	 */
 	public static void main(String[] args) {
 
-		// nome do arquivo
-		String arquivo = "testeLimpo.txt";
+		// Escolha o arquivo a ser executado
+		 String arquivo = "SEQ-LRU.txt";
+		// String arquivo = "SEQ-ALE.txt";
+		// String arquivo = "ALE-LRU.txt";
+		// String arquivo = "ALE-ALE.txt";
 
 		Path path = Paths.get(arquivo);
 		try (Scanner sc = new Scanner(Files.newBufferedReader(path, Charset.forName("utf8")))) {
@@ -82,14 +85,16 @@ public class App {
 					}
 					break;
 				case "A":
-					System.out.println("Acesso " + idProcesso + " " + tamProcesso);
-					if (!tipoEntrada.equals("aleatorio"))
+					if (!tipoEntrada.equals("aleatorio")) {
+						System.out.println("Acesso " + idProcesso + " " + tamProcesso);
 						acessaMemoria(idProcesso, tamProcesso);
+					}
 					break;
 				case "M":
-					System.out.println("MemAloc " + idProcesso + " " + tamProcesso);
-					if (!tipoEntrada.equals("aleatorio"))
+					if (!tipoEntrada.equals("aleatorio")) {
+						System.out.println("MemAloc " + idProcesso + " " + tamProcesso);
 						alocaMemoria(idProcesso, tamProcesso);
+					}
 					break;
 				default:
 					System.out.println("Erro na seleção do comando");
@@ -120,7 +125,7 @@ public class App {
 		int tamNeces = (int) (tamProcesso / (double) tamPagina);
 		if (nFramesDisp < tamNeces && nPaginasDisp < tamNeces) {
 			System.out.println("ERRO: Nao foi possivel adicionar processo " + idProcesso + ": Memoria cheia!");
-			return;
+			System.exit(0);
 		}
 
 		// Havendo espaco para o novo processo: ele é criado, incluido na tabela de
@@ -182,7 +187,7 @@ public class App {
 				}
 				if (indice == -1) {
 					System.out.println("ERRO: Nao foi possivel alocar memoria para " + idProcesso + ": Memoria Cheia");
-					break;
+					System.exit(0);
 				}
 				pag.adicionaMemoriaVirtual(indice, memVirtual);
 				pageFault(pag);

@@ -125,7 +125,7 @@ public class Pagina {
 				memoria[iVirt[mAloc + i]] = this;
 			}
 		}
-		mAloc = +mAlocExtra;
+		mAloc += mAlocExtra;
 		contadorLRU++;
 		
 	}

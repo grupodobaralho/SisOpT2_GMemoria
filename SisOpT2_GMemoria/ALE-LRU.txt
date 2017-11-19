@@ -1,0 +1,8 @@
+aleatorio
+lru
+8
+64
+16
+C p1 16
+C p2 18
+C p3 10

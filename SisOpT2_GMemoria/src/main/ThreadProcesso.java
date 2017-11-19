@@ -12,39 +12,45 @@ import java.util.Random;
  * 
  */
 public class ThreadProcesso implements Runnable {
-	
+
 	private Processo processo;
-	//private static boolean emUso = false;
-	
+	private final int iteracoes = 10;
+
 	private String nome;
+
 	public ThreadProcesso(String nome, Processo processo) {
-		System.out.println("Eta nome: "+nome + " Eta proc: "+ processo.getId());
 		this.nome = nome;
 		this.processo = processo;
 		Thread t = new Thread(this);
 		t.start();
+		try {
+			t.join(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
-	public void run() {	
+	public void run() {
 		Random generator = new Random();
 		int randomNum;
-		while(true){
+		while (true) {
 			try {
-				Thread.sleep(20);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			randomNum = generator.nextInt((10 - 1) + 1) + 1;
-			if(randomNum !=10) {
-				randomNum = generator.nextInt((processo.getTamProcesso() - 0) + 1);
+			if (randomNum != 10) {
+				randomNum = generator.nextInt((processo.getTamProcesso() - 0));
 				App.acessaMemoria(processo.getId(), randomNum);
-				System.out.println("T Processo "+nome + " "+processo.getId()+" iniciou acesso a memoria " + randomNum);
+				System.out.println(
+						"T Processo " + nome + " " + processo.getId() + " iniciou acesso a memoria " + randomNum);
 			} else {
-				App.alocaMemoria(processo.getId(), 4);
-				System.out.println("T Processo "+nome + " "+processo.getId()+" iniciou alocação de memoria +1");
+				App.alocaMemoria(processo.getId(), 1);
+				System.out.println("T Processo " + nome + " " + processo.getId() + " iniciou alocação de memoria +1");
 			}
-			App.printa();
+			//App.printa();
 		}
 	}
 
