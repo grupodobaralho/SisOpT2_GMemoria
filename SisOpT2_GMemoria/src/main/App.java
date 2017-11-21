@@ -53,7 +53,7 @@ public class App {
 	public static void main(String[] args) {
 
 		// Escolha o arquivo a ser executado
-		 String arquivo = "SEQ-LRU.txt";
+		String arquivo = "SEQ-LRU.txt";
 		// String arquivo = "SEQ-ALE.txt";
 		// String arquivo = "ALE-LRU.txt";
 		// String arquivo = "ALE-ALE.txt";
@@ -339,8 +339,8 @@ public class App {
 
 	/**
 	 * Metodo auxiliar para exibir o estado do programa no console. Em alguns pontos
-	 * foram feitos tratamentos custosos das estruturas do programa, mas isso foi
-	 * feito para permitir melhor visualização dos resultados.
+	 * foram feitos tratamentos um tanto quanto custosos das estruturas do programa,
+	 * mas isso foi feito para permitir melhor visualização dos resultados.
 	 */
 	public synchronized static void printa() {
 		List<Pagina> listaP = new ArrayList<>();

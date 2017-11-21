@@ -13,11 +13,16 @@ import java.util.Random;
  */
 public class ThreadProcesso implements Runnable {
 
-	private Processo processo;
-	private final int iteracoes = 10;
-
 	private String nome;
+	private Processo processo;
 
+	/**
+	 * Esta classe representa uma Thread de um processo. Ela recebe um nome e o
+	 * processo em si, e execita
+	 * 
+	 * @param nome
+	 * @param processo
+	 */
 	public ThreadProcesso(String nome, Processo processo) {
 		this.nome = nome;
 		this.processo = processo;
@@ -30,6 +35,13 @@ public class ThreadProcesso implements Runnable {
 		}
 	}
 
+	/**
+	 * O Metodo Run eh o metodo que indica a ação da Thread no programa. No nosso
+	 * caso, ele faz a Thread entrar em um loop que fica sorteando um valor de 1 a
+	 * 10. Se o valor sorteado for 10 (10% de chance), ele irah alocar mais 1 de
+	 * memoria para o processo, se for outro numero, ele irah acessar uma pagina
+	 * randomica do processo na memoria (90% de chance).
+	 */
 	@Override
 	public void run() {
 		Random generator = new Random();
@@ -50,7 +62,7 @@ public class ThreadProcesso implements Runnable {
 				App.alocaMemoria(processo.getId(), 1);
 				System.out.println("T Processo " + nome + " " + processo.getId() + " iniciou alocação de memoria +1");
 			}
-			//App.printa();
+			// App.printa();
 		}
 	}
 
