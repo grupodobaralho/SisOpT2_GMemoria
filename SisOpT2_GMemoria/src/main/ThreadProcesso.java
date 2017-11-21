@@ -48,7 +48,7 @@ public class ThreadProcesso implements Runnable {
 		int randomNum;
 		while (true) {
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(200);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
