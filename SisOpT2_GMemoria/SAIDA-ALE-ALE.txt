@@ -1,0 +1,1696 @@
+Cria Processo p1 16
+T Processo #Threadp1 p1 iniciou acesso a memoria 2
+T Processo #Threadp1 p1 iniciou acesso a memoria 3
+T Processo #Threadp1 p1 iniciou acesso a memoria 6
+T Processo #Threadp1 p1 iniciou acesso a memoria 3
+Cria Processo p2 18
+T Processo #Threadp1 p1 iniciou acesso a memoria 0
+T Processo #Threadp1 p1 iniciou acesso a memoria 4
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp2 p2 iniciou acesso a memoria 4
+T Processo #Threadp1 p1 iniciou acesso a memoria 3
+T Processo #Threadp1 p1 iniciou acesso a memoria 2
+T Processo #Threadp2 p2 iniciou acesso a memoria 12
+T Processo #Threadp2 p2 iniciou acesso a memoria 14
+T Processo #Threadp1 p1 iniciou acesso a memoria 0
+T Processo #Threadp2 p2 iniciou acesso a memoria 18
+T Processo #Threadp1 p1 iniciou acesso a memoria 1
+Cria Processo p3 10
+T Processo #Threadp2 p2 iniciou acesso a memoria 3
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp3 p3 iniciou acesso a memoria 8
+T Processo #Threadp1 p1 iniciou acesso a memoria 0
+T Processo #Threadp3 p3 iniciou acesso a memoria 2
+T Processo #Threadp2 p2 iniciou acesso a memoria 6
+T Processo #Threadp2 p2 iniciou acesso a memoria 9
+T Processo #Threadp1 p1 iniciou acesso a memoria 11
+T Processo #Threadp3 p3 iniciou acesso a memoria 7
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou acesso a memoria 8
+T Processo #Threadp3 p3 iniciou acesso a memoria 3
+T Processo #Threadp2 p2 iniciou acesso a memoria 14
+T Processo #Threadp3 p3 iniciou acesso a memoria 4
+T Processo #Threadp1 p1 iniciou acesso a memoria 15
+T Processo #Threadp2 p2 iniciou acesso a memoria 15
+T Processo #Threadp3 p3 iniciou acesso a memoria 7
+T Processo #Threadp1 p1 iniciou acesso a memoria 10
+T Processo #Threadp2 p2 iniciou acesso a memoria 5
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp3 p3 iniciou acesso a memoria 3
+T Processo #Threadp3 p3 iniciou acesso a memoria 4
+T Processo #Threadp1 p1 iniciou acesso a memoria 10
+T Processo #Threadp2 p2 iniciou acesso a memoria 9
+T Processo #Threadp2 p2 iniciou acesso a memoria 5
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp3 p3 iniciou acesso a memoria 8
+T Processo #Threadp2 p2 iniciou acesso a memoria 17
+T Processo #Threadp3 p3 iniciou acesso a memoria 4
+T Processo #Threadp1 p1 iniciou acesso a memoria 14
+T Processo #Threadp2 p2 iniciou acesso a memoria 3
+T Processo #Threadp3 p3 iniciou acesso a memoria 6
+T Processo #Threadp1 p1 iniciou acesso a memoria 11
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp3 p3 iniciou acesso a memoria 5
+T Processo #Threadp2 p2 iniciou acesso a memoria 0
+T Processo #Threadp2 p2 iniciou acesso a memoria 9
+T Processo #Threadp3 p3 iniciou acesso a memoria 8
+T Processo #Threadp1 p1 iniciou acesso a memoria 1
+T Processo #Threadp2 p2 iniciou acesso a memoria 13
+T Processo #Threadp1 p1 iniciou acesso a memoria 10
+T Processo #Threadp3 p3 iniciou acesso a memoria 9
+T Processo #Threadp2 p2 iniciou acesso a memoria 0
+T Processo #Threadp3 p3 iniciou acesso a memoria 4
+T Processo #Threadp1 p1 iniciou acesso a memoria 14
+T Processo #Threadp2 p2 iniciou acesso a memoria 4
+T Processo #Threadp1 p1 iniciou acesso a memoria 5
+T Processo #Threadp3 p3 iniciou acesso a memoria 7
+T Processo #Threadp2 p2 iniciou acesso a memoria 7
+T Processo #Threadp3 p3 iniciou acesso a memoria 5
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp3 p3 iniciou alocação de memoria +1
+T Processo #Threadp2 p2 iniciou acesso a memoria 17
+T Processo #Threadp1 p1 iniciou acesso a memoria 1
+T Processo #Threadp2 p2 iniciou acesso a memoria 10
+T Processo #Threadp3 p3 iniciou acesso a memoria 10
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp2 p2 iniciou acesso a memoria 15
+T Processo #Threadp1 p1 iniciou acesso a memoria 3
+T Processo #Threadp3 p3 iniciou acesso a memoria 5
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp3 p3 iniciou acesso a memoria 5
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp3 p3 iniciou acesso a memoria 4
+T Processo #Threadp1 p1 iniciou acesso a memoria 8
+T Processo #Threadp2 p2 iniciou acesso a memoria 13
+T Processo #Threadp3 p3 iniciou acesso a memoria 10
+T Processo #Threadp1 p1 iniciou acesso a memoria 3
+T Processo #Threadp3 p3 iniciou acesso a memoria 9
+T Processo #Threadp2 p2 iniciou acesso a memoria 5
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp3 p3 iniciou acesso a memoria 5
+T Processo #Threadp2 p2 iniciou acesso a memoria 21
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp3 p3 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp3 p3 iniciou acesso a memoria 8
+T Processo #Threadp2 p2 iniciou acesso a memoria 1
+T Processo #Threadp1 p1 iniciou acesso a memoria 3
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp3 p3 iniciou acesso a memoria 4
+T Processo #Threadp2 p2 iniciou acesso a memoria 22
+T Processo #Threadp3 p3 iniciou acesso a memoria 10
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp2 p2 iniciou acesso a memoria 15
+T Processo #Threadp3 p3 iniciou acesso a memoria 6
+T Processo #Threadp1 p1 iniciou acesso a memoria 14
+T Processo #Threadp2 p2 iniciou acesso a memoria 19
+T Processo #Threadp3 p3 iniciou acesso a memoria 9
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp2 p2 iniciou acesso a memoria 13
+T Processo #Threadp3 p3 iniciou acesso a memoria 0
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp1 p1 iniciou acesso a memoria 0
+T Processo #Threadp3 p3 iniciou acesso a memoria 10
+T Processo #Threadp2 p2 iniciou acesso a memoria 21
+T Processo #Threadp3 p3 iniciou acesso a memoria 2
+T Processo #Threadp1 p1 iniciou acesso a memoria 15
+T Processo #Threadp2 p2 iniciou acesso a memoria 14
+T Processo #Threadp2 p2 iniciou acesso a memoria 3
+T Processo #Threadp1 p1 iniciou acesso a memoria 9
+T Processo #Threadp3 p3 iniciou acesso a memoria 9
+T Processo #Threadp1 p1 iniciou acesso a memoria 9
+T Processo #Threadp3 p3 iniciou acesso a memoria 11
+T Processo #Threadp2 p2 iniciou acesso a memoria 20
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp2 p2 iniciou acesso a memoria 14
+T Processo #Threadp3 p3 iniciou acesso a memoria 8
+T Processo #Threadp1 p1 iniciou acesso a memoria 14
+T Processo #Threadp3 p3 iniciou alocação de memoria +1
+T Processo #Threadp2 p2 iniciou acesso a memoria 6
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou acesso a memoria 8
+T Processo #Threadp3 p3 iniciou acesso a memoria 9
+T Processo #Threadp2 p2 iniciou acesso a memoria 14
+T Processo #Threadp1 p1 iniciou acesso a memoria 9
+T Processo #Threadp3 p3 iniciou acesso a memoria 4
+T Processo #Threadp2 p2 iniciou acesso a memoria 7
+T Processo #Threadp1 p1 iniciou acesso a memoria 1
+T Processo #Threadp3 p3 iniciou acesso a memoria 6
+T Processo #Threadp2 p2 iniciou acesso a memoria 11
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp3 p3 iniciou acesso a memoria 6
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp3 p3 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou acesso a memoria 3
+T Processo #Threadp2 p2 iniciou acesso a memoria 23
+T Processo #Threadp1 p1 iniciou acesso a memoria 1
+T Processo #Threadp3 p3 iniciou acesso a memoria 0
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp2 p2 iniciou acesso a memoria 4
+T Processo #Threadp3 p3 iniciou acesso a memoria 8
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp3 p3 iniciou acesso a memoria 7
+T Processo #Threadp2 p2 iniciou acesso a memoria 16
+T Processo #Threadp1 p1 iniciou acesso a memoria 4
+T Processo #Threadp2 p2 iniciou acesso a memoria 19
+T Processo #Threadp3 p3 iniciou acesso a memoria 11
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp2 p2 iniciou acesso a memoria 23
+T Processo #Threadp3 p3 iniciou acesso a memoria 13
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp3 p3 iniciou acesso a memoria 9
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp3 p3 iniciou acesso a memoria 7
+T Processo #Threadp1 p1 iniciou acesso a memoria 6
+T Processo #Threadp2 p2 iniciou acesso a memoria 25
+T Processo #Threadp2 p2 iniciou acesso a memoria 8
+T Processo #Threadp3 p3 iniciou acesso a memoria 5
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp3 p3 iniciou acesso a memoria 1
+T Processo #Threadp1 p1 iniciou acesso a memoria 2
+T Processo #Threadp2 p2 iniciou acesso a memoria 21
+T Processo #Threadp1 p1 iniciou acesso a memoria 15
+T Processo #Threadp3 p3 iniciou acesso a memoria 10
+T Processo #Threadp2 p2 iniciou acesso a memoria 16
+T Processo #Threadp1 p1 iniciou acesso a memoria 1
+T Processo #Threadp3 p3 iniciou acesso a memoria 0
+T Processo #Threadp2 p2 iniciou acesso a memoria 27
+T Processo #Threadp1 p1 iniciou acesso a memoria 0
+T Processo #Threadp3 p3 iniciou acesso a memoria 10
+T Processo #Threadp2 p2 iniciou acesso a memoria 12
+T Processo #Threadp1 p1 iniciou acesso a memoria 15
+T Processo #Threadp3 p3 iniciou acesso a memoria 8
+T Processo #Threadp2 p2 iniciou acesso a memoria 25
+T Processo #Threadp1 p1 iniciou acesso a memoria 6
+T Processo #Threadp3 p3 iniciou acesso a memoria 6
+T Processo #Threadp2 p2 iniciou acesso a memoria 23
+T Processo #Threadp3 p3 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou acesso a memoria 0
+T Processo #Threadp2 p2 iniciou acesso a memoria 2
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp3 p3 iniciou acesso a memoria 9
+T Processo #Threadp2 p2 iniciou acesso a memoria 1
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp3 p3 iniciou acesso a memoria 6
+T Processo #Threadp2 p2 iniciou acesso a memoria 4
+T Processo #Threadp3 p3 iniciou acesso a memoria 6
+T Processo #Threadp1 p1 iniciou acesso a memoria 3
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp3 p3 iniciou acesso a memoria 9
+T Processo #Threadp2 p2 iniciou acesso a memoria 4
+T Processo #Threadp1 p1 iniciou acesso a memoria 2
+T Processo #Threadp3 p3 iniciou acesso a memoria 1
+T Processo #Threadp2 p2 iniciou acesso a memoria 27
+T Processo #Threadp3 p3 iniciou acesso a memoria 10
+T Processo #Threadp1 p1 iniciou acesso a memoria 11
+T Processo #Threadp2 p2 iniciou acesso a memoria 16
+T Processo #Threadp3 p3 iniciou acesso a memoria 12
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp2 p2 iniciou acesso a memoria 5
+T Processo #Threadp1 p1 iniciou acesso a memoria 14
+T Processo #Threadp3 p3 iniciou acesso a memoria 13
+T Processo #Threadp2 p2 iniciou acesso a memoria 10
+T Processo #Threadp3 p3 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou acesso a memoria 15
+T Processo #Threadp2 p2 iniciou acesso a memoria 22
+T Processo #Threadp3 p3 iniciou acesso a memoria 3
+T Processo #Threadp1 p1 iniciou acesso a memoria 9
+T Processo #Threadp2 p2 iniciou acesso a memoria 12
+
+########### Page Fault da pagina p32!! Estados antes do PageFault: 
+
+T Processo #Threadp1 p1 iniciou acesso a memoria 2
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p10	true	8	 0              0->p10	true  0  40            	0->p32	false	1	 0
+1->p10	true	8	 0              1->p11	true  8  39            	1->p32	VAZIO		 
+2->p10	true	8	 0              2->p20	true  16  21           	2->p32	VAZIO		 
+3->p10	true	8	 0              3->p21	true  24  21           	3->p32	VAZIO		 
+4->p10	true	8	 0              4->p22	true  32  30           	4->p32	VAZIO		 
+5->p10	true	8	 0              5->p30	true  40  35           	5->p32	VAZIO		 
+6->p10	true	8	 0              6->p31	true  48  39           	6->p32	VAZIO		 
+7->p10	true	8	 0              7->p23	true  56  12           	7->p32	VAZIO		 
+8->p11	true	8	 8              8->p32	false  0  0            	8->VAZIO
+9->p11	true	8	 8                                            	9->VAZIO
+10->p11	true	8	 8                                           	10->VAZIO
+11->p11	true	8	 8                                           	11->VAZIO
+12->p11	true	8	 8                                           	12->VAZIO
+13->p11	true	8	 8                                           	13->VAZIO
+14->p11	true	8	 8                                           	14->VAZIO
+15->p11	true	8	 8                                           	15->VAZIO
+16->p20	true	8	 16                                          
+17->p20	true	8	 16                                          
+18->p20	true	8	 16                                          
+19->p20	true	8	 16                                          
+20->p20	true	8	 16                                          
+21->p20	true	8	 16                                          
+22->p20	true	8	 16                                          
+23->p20	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p30	true	8	 40                                          
+41->p30	true	8	 40                                          
+42->p30	true	8	 40                                          
+43->p30	true	8	 40                                          
+44->p30	true	8	 40                                          
+45->p30	true	8	 40                                          
+46->p30	true	8	 40                                          
+47->p30	true	8	 40                                          
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	false  0  40           	0->p10	false	8	 0
+1->p32	VAZIO		                1->p11	true  8  39            	1->p10	false	8	 0
+2->p32	VAZIO		                2->p20	true  16  21           	2->p10	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  21           	3->p10	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  30           	4->p10	false	8	 0
+5->p32	VAZIO		                5->p30	true  40  35           	5->p10	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  39           	6->p10	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  12           	7->p10	false	8	 0
+8->p11	true	8	 8              8->p32	true  0  1             	8->VAZIO
+9->p11	true	8	 8                                            	9->VAZIO
+10->p11	true	8	 8                                           	10->VAZIO
+11->p11	true	8	 8                                           	11->VAZIO
+12->p11	true	8	 8                                           	12->VAZIO
+13->p11	true	8	 8                                           	13->VAZIO
+14->p11	true	8	 8                                           	14->VAZIO
+15->p11	true	8	 8                                           	15->VAZIO
+16->p20	true	8	 16                                          
+17->p20	true	8	 16                                          
+18->p20	true	8	 16                                          
+19->p20	true	8	 16                                          
+20->p20	true	8	 16                                          
+21->p20	true	8	 16                                          
+22->p20	true	8	 16                                          
+23->p20	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p30	true	8	 40                                          
+41->p30	true	8	 40                                          
+42->p30	true	8	 40                                          
+43->p30	true	8	 40                                          
+44->p30	true	8	 40                                          
+45->p30	true	8	 40                                          
+46->p30	true	8	 40                                          
+47->p30	true	8	 40                                          
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+T Processo #Threadp3 p3 iniciou alocação de memoria +1
+T Processo #Threadp2 p2 iniciou acesso a memoria 5
+T Processo #Threadp1 p1 iniciou acesso a memoria 14
+T Processo #Threadp3 p3 iniciou acesso a memoria 7
+T Processo #Threadp2 p2 iniciou acesso a memoria 18
+T Processo #Threadp1 p1 iniciou acesso a memoria 15
+T Processo #Threadp3 p3 iniciou acesso a memoria 2
+T Processo #Threadp2 p2 iniciou acesso a memoria 14
+
+########### Page Fault da pagina p10!! Estados antes do PageFault: 
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	false  0  40           	0->p10	false	8	 0
+1->p32	VAZIO		                1->p11	true  8  41            	1->p10	false	8	 0
+2->p32	VAZIO		                2->p20	true  16  22           	2->p10	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  22           	3->p10	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  31           	4->p10	false	8	 0
+5->p32	VAZIO		                5->p30	true  40  37           	5->p10	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  40           	6->p10	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  12           	7->p10	false	8	 0
+8->p11	true	8	 8              8->p32	true  0  1             	8->VAZIO
+9->p11	true	8	 8                                            	9->VAZIO
+10->p11	true	8	 8                                           	10->VAZIO
+11->p11	true	8	 8                                           	11->VAZIO
+12->p11	true	8	 8                                           	12->VAZIO
+13->p11	true	8	 8                                           	13->VAZIO
+14->p11	true	8	 8                                           	14->VAZIO
+15->p11	true	8	 8                                           	15->VAZIO
+16->p20	true	8	 16                                          
+17->p20	true	8	 16                                          
+18->p20	true	8	 16                                          
+19->p20	true	8	 16                                          
+20->p20	true	8	 16                                          
+21->p20	true	8	 16                                          
+22->p20	true	8	 16                                          
+23->p20	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p30	true	8	 40                                          
+41->p30	true	8	 40                                          
+42->p30	true	8	 40                                          
+43->p30	true	8	 40                                          
+44->p30	true	8	 40                                          
+45->p30	true	8	 40                                          
+46->p30	true	8	 40                                          
+47->p30	true	8	 40                                          
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  41            	0->p11	false	8	 0
+1->p32	VAZIO		                1->p11	false  0  41           	1->p11	false	8	 0
+2->p32	VAZIO		                2->p20	true  16  22           	2->p11	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  22           	3->p11	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  31           	4->p11	false	8	 0
+5->p32	VAZIO		                5->p30	true  40  37           	5->p11	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  40           	6->p11	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  12           	7->p11	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  1             	8->VAZIO
+9->p10	true	8	 8                                            	9->VAZIO
+10->p10	true	8	 8                                           	10->VAZIO
+11->p10	true	8	 8                                           	11->VAZIO
+12->p10	true	8	 8                                           	12->VAZIO
+13->p10	true	8	 8                                           	13->VAZIO
+14->p10	true	8	 8                                           	14->VAZIO
+15->p10	true	8	 8                                           	15->VAZIO
+16->p20	true	8	 16                                          
+17->p20	true	8	 16                                          
+18->p20	true	8	 16                                          
+19->p20	true	8	 16                                          
+20->p20	true	8	 16                                          
+21->p20	true	8	 16                                          
+22->p20	true	8	 16                                          
+23->p20	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p30	true	8	 40                                          
+41->p30	true	8	 40                                          
+42->p30	true	8	 40                                          
+43->p30	true	8	 40                                          
+44->p30	true	8	 40                                          
+45->p30	true	8	 40                                          
+46->p30	true	8	 40                                          
+47->p30	true	8	 40                                          
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+T Processo #Threadp1 p1 iniciou acesso a memoria 1
+T Processo #Threadp3 p3 iniciou acesso a memoria 12
+T Processo #Threadp2 p2 iniciou acesso a memoria 12
+
+########### Page Fault da pagina p12!! Estados antes do PageFault: 
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  42            	0->p11	false	8	 0
+1->p32	VAZIO		                1->p11	false  0  41           	1->p11	false	8	 0
+2->p32	VAZIO		                2->p20	true  16  22           	2->p11	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  23           	3->p11	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  31           	4->p11	false	8	 0
+5->p32	VAZIO		                5->p30	true  40  37           	5->p11	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  41           	6->p11	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  12           	7->p11	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  1             	8->p12	false	1	 8
+9->p10	true	8	 8              9->p12	false  8  0            	9->p12	VAZIO		 
+10->p10	true	8	 8                                           	10->p12	VAZIO		 
+11->p10	true	8	 8                                           	11->p12	VAZIO		 
+12->p10	true	8	 8                                           	12->p12	VAZIO		 
+13->p10	true	8	 8                                           	13->p12	VAZIO		 
+14->p10	true	8	 8                                           	14->p12	VAZIO		 
+15->p10	true	8	 8                                           	15->p12	VAZIO		 
+16->p20	true	8	 16                                          
+17->p20	true	8	 16                                          
+18->p20	true	8	 16                                          
+19->p20	true	8	 16                                          
+20->p20	true	8	 16                                          
+21->p20	true	8	 16                                          
+22->p20	true	8	 16                                          
+23->p20	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p30	true	8	 40                                          
+41->p30	true	8	 40                                          
+42->p30	true	8	 40                                          
+43->p30	true	8	 40                                          
+44->p30	true	8	 40                                          
+45->p30	true	8	 40                                          
+46->p30	true	8	 40                                          
+47->p30	true	8	 40                                          
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  42            	0->p11	false	8	 0
+1->p32	VAZIO		                1->p11	false  0  41           	1->p11	false	8	 0
+2->p32	VAZIO		                2->p20	true  16  22           	2->p11	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  23           	3->p11	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  31           	4->p11	false	8	 0
+5->p32	VAZIO		                5->p30	false  8  37           	5->p11	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  41           	6->p11	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  12           	7->p11	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  1             	8->p30	false	8	 8
+9->p10	true	8	 8              9->p12	true  40  1            	9->p30	false	8	 8
+10->p10	true	8	 8                                           	10->p30	false	8	 8
+11->p10	true	8	 8                                           	11->p30	false	8	 8
+12->p10	true	8	 8                                           	12->p30	false	8	 8
+13->p10	true	8	 8                                           	13->p30	false	8	 8
+14->p10	true	8	 8                                           	14->p30	false	8	 8
+15->p10	true	8	 8                                           	15->p30	false	8	 8
+16->p20	true	8	 16                                          
+17->p20	true	8	 16                                          
+18->p20	true	8	 16                                          
+19->p20	true	8	 16                                          
+20->p20	true	8	 16                                          
+21->p20	true	8	 16                                          
+22->p20	true	8	 16                                          
+23->p20	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	1	 40                                          
+41->p12	VAZIO		                                             
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+T Processo #Threadp1 p1 iniciou alocação de memoria +1
+
+########### Page Fault da pagina p30!! Estados antes do PageFault: 
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  42            	0->p11	false	8	 0
+1->p32	VAZIO		                1->p11	false  0  42           	1->p11	false	8	 0
+2->p32	VAZIO		                2->p20	true  16  22           	2->p11	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  23           	3->p11	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  31           	4->p11	false	8	 0
+5->p32	VAZIO		                5->p30	false  8  37           	5->p11	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  41           	6->p11	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  12           	7->p11	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  1             	8->p30	false	8	 8
+9->p10	true	8	 8              9->p12	true  40  1            	9->p30	false	8	 8
+10->p10	true	8	 8                                           	10->p30	false	8	 8
+11->p10	true	8	 8                                           	11->p30	false	8	 8
+12->p10	true	8	 8                                           	12->p30	false	8	 8
+13->p10	true	8	 8                                           	13->p30	false	8	 8
+14->p10	true	8	 8                                           	14->p30	false	8	 8
+15->p10	true	8	 8                                           	15->p30	false	8	 8
+16->p20	true	8	 16                                          
+17->p20	true	8	 16                                          
+18->p20	true	8	 16                                          
+19->p20	true	8	 16                                          
+20->p20	true	8	 16                                          
+21->p20	true	8	 16                                          
+22->p20	true	8	 16                                          
+23->p20	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	1	 40                                          
+41->p12	VAZIO		                                             
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  42            	0->p11	false	8	 0
+1->p32	VAZIO		                1->p11	false  0  42           	1->p11	false	8	 0
+2->p32	VAZIO		                2->p20	false  8  22           	2->p11	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  23           	3->p11	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  31           	4->p11	false	8	 0
+5->p32	VAZIO		                5->p30	true  16  38           	5->p11	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  41           	6->p11	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  12           	7->p11	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  1             	8->p20	false	8	 8
+9->p10	true	8	 8              9->p12	true  40  1            	9->p20	false	8	 8
+10->p10	true	8	 8                                           	10->p20	false	8	 8
+11->p10	true	8	 8                                           	11->p20	false	8	 8
+12->p10	true	8	 8                                           	12->p20	false	8	 8
+13->p10	true	8	 8                                           	13->p20	false	8	 8
+14->p10	true	8	 8                                           	14->p20	false	8	 8
+15->p10	true	8	 8                                           	15->p20	false	8	 8
+16->p30	true	8	 16                                          
+17->p30	true	8	 16                                          
+18->p30	true	8	 16                                          
+19->p30	true	8	 16                                          
+20->p30	true	8	 16                                          
+21->p30	true	8	 16                                          
+22->p30	true	8	 16                                          
+23->p30	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	1	 40                                          
+41->p12	VAZIO		                                             
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+T Processo #Threadp3 p3 iniciou acesso a memoria 3
+T Processo #Threadp2 p2 iniciou acesso a memoria 22
+
+########### Page Fault da pagina p11!! Estados antes do PageFault: 
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  42            	0->p11	false	8	 0
+1->p32	VAZIO		                1->p11	false  0  42           	1->p11	false	8	 0
+2->p32	VAZIO		                2->p20	false  8  22           	2->p11	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  23           	3->p11	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  32           	4->p11	false	8	 0
+5->p32	VAZIO		                5->p30	true  16  39           	5->p11	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  41           	6->p11	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  12           	7->p11	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  1             	8->p20	false	8	 8
+9->p10	true	8	 8              9->p12	true  40  1            	9->p20	false	8	 8
+10->p10	true	8	 8                                           	10->p20	false	8	 8
+11->p10	true	8	 8                                           	11->p20	false	8	 8
+12->p10	true	8	 8                                           	12->p20	false	8	 8
+13->p10	true	8	 8                                           	13->p20	false	8	 8
+14->p10	true	8	 8                                           	14->p20	false	8	 8
+15->p10	true	8	 8                                           	15->p20	false	8	 8
+16->p30	true	8	 16                                          
+17->p30	true	8	 16                                          
+18->p30	true	8	 16                                          
+19->p30	true	8	 16                                          
+20->p30	true	8	 16                                          
+21->p30	true	8	 16                                          
+22->p30	true	8	 16                                          
+23->p30	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	1	 40                                          
+41->p12	VAZIO		                                             
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  42            	0->p30	false	8	 0
+1->p32	VAZIO		                1->p11	true  16  43           	1->p30	false	8	 0
+2->p32	VAZIO		                2->p20	false  8  22           	2->p30	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  23           	3->p30	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  32           	4->p30	false	8	 0
+5->p32	VAZIO		                5->p30	false  0  39           	5->p30	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  41           	6->p30	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  12           	7->p30	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  1             	8->p20	false	8	 8
+9->p10	true	8	 8              9->p12	true  40  1            	9->p20	false	8	 8
+10->p10	true	8	 8                                           	10->p20	false	8	 8
+11->p10	true	8	 8                                           	11->p20	false	8	 8
+12->p10	true	8	 8                                           	12->p20	false	8	 8
+13->p10	true	8	 8                                           	13->p20	false	8	 8
+14->p10	true	8	 8                                           	14->p20	false	8	 8
+15->p10	true	8	 8                                           	15->p20	false	8	 8
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	1	 40                                          
+41->p12	VAZIO		                                             
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	5	 56                                          
+57->p23	true	5	 56                                          
+58->p23	true	5	 56                                          
+59->p23	true	5	 56                                          
+60->p23	true	5	 56                                          
+61->p23	VAZIO		                                             
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp3 p3 iniciou acesso a memoria 12
+T Processo #Threadp2 p2 iniciou acesso a memoria 11
+T Processo #Threadp1 p1 iniciou acesso a memoria 2
+T Processo #Threadp3 p3 iniciou acesso a memoria 16
+T Processo #Threadp2 p2 iniciou acesso a memoria 11
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp3 p3 iniciou acesso a memoria 10
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou alocação de memoria +1
+
+########### Page Fault da pagina p30!! Estados antes do PageFault: 
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  44            	0->p30	false	8	 0
+1->p32	VAZIO		                1->p11	true  16  44           	1->p30	false	8	 0
+2->p32	VAZIO		                2->p20	false  8  22           	2->p30	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  25           	3->p30	false	8	 0
+4->p32	VAZIO		                4->p22	true  32  32           	4->p30	false	8	 0
+5->p32	VAZIO		                5->p30	false  0  39           	5->p30	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  43           	6->p30	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  14           	7->p30	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  2             	8->p20	false	8	 8
+9->p10	true	8	 8              9->p12	true  40  3            	9->p20	false	8	 8
+10->p10	true	8	 8                                           	10->p20	false	8	 8
+11->p10	true	8	 8                                           	11->p20	false	8	 8
+12->p10	true	8	 8                                           	12->p20	false	8	 8
+13->p10	true	8	 8                                           	13->p20	false	8	 8
+14->p10	true	8	 8                                           	14->p20	false	8	 8
+15->p10	true	8	 8                                           	15->p20	false	8	 8
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	6	 56                                          
+57->p23	true	6	 56                                          
+58->p23	true	6	 56                                          
+59->p23	true	6	 56                                          
+60->p23	true	6	 56                                          
+61->p23	true	6	 56                                          
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  44            	0->p22	false	8	 0
+1->p32	VAZIO		                1->p11	true  16  44           	1->p22	false	8	 0
+2->p32	VAZIO		                2->p20	false  8  22           	2->p22	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  25           	3->p22	false	8	 0
+4->p32	VAZIO		                4->p22	false  0  32           	4->p22	false	8	 0
+5->p32	VAZIO		                5->p30	true  32  40           	5->p22	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  43           	6->p22	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  14           	7->p22	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  2             	8->p20	false	8	 8
+9->p10	true	8	 8              9->p12	true  40  3            	9->p20	false	8	 8
+10->p10	true	8	 8                                           	10->p20	false	8	 8
+11->p10	true	8	 8                                           	11->p20	false	8	 8
+12->p10	true	8	 8                                           	12->p20	false	8	 8
+13->p10	true	8	 8                                           	13->p20	false	8	 8
+14->p10	true	8	 8                                           	14->p20	false	8	 8
+15->p10	true	8	 8                                           	15->p20	false	8	 8
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p30	true	8	 32                                          
+33->p30	true	8	 32                                          
+34->p30	true	8	 32                                          
+35->p30	true	8	 32                                          
+36->p30	true	8	 32                                          
+37->p30	true	8	 32                                          
+38->p30	true	8	 32                                          
+39->p30	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	6	 56                                          
+57->p23	true	6	 56                                          
+58->p23	true	6	 56                                          
+59->p23	true	6	 56                                          
+60->p23	true	6	 56                                          
+61->p23	true	6	 56                                          
+62->p23	VAZIO		                                             
+63->p23	VAZIO		                                             
+
+
+T Processo #Threadp3 p3 iniciou acesso a memoria 4
+T Processo #Threadp2 p2 iniciou acesso a memoria 9
+T Processo #Threadp1 p1 iniciou acesso a memoria 0
+T Processo #Threadp3 p3 iniciou acesso a memoria 9
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou acesso a memoria 13
+T Processo #Threadp3 p3 iniciou acesso a memoria 14
+
+########### Page Fault da pagina p20!! Estados antes do PageFault: 
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p32	true	1	 0              0->p10	true  8  45            	0->p22	false	8	 0
+1->p32	VAZIO		                1->p11	true  16  45           	1->p22	false	8	 0
+2->p32	VAZIO		                2->p20	false  8  22           	2->p22	false	8	 0
+3->p32	VAZIO		                3->p21	true  24  26           	3->p22	false	8	 0
+4->p32	VAZIO		                4->p22	false  0  32           	4->p22	false	8	 0
+5->p32	VAZIO		                5->p30	true  32  41           	5->p22	false	8	 0
+6->p32	VAZIO		                6->p31	true  48  45           	6->p22	false	8	 0
+7->p32	VAZIO		                7->p23	true  56  16           	7->p22	false	8	 0
+8->p10	true	8	 8              8->p32	true  0  2             	8->p20	false	8	 8
+9->p10	true	8	 8              9->p12	true  40  3            	9->p20	false	8	 8
+10->p10	true	8	 8                                           	10->p20	false	8	 8
+11->p10	true	8	 8                                           	11->p20	false	8	 8
+12->p10	true	8	 8                                           	12->p20	false	8	 8
+13->p10	true	8	 8                                           	13->p20	false	8	 8
+14->p10	true	8	 8                                           	14->p20	false	8	 8
+15->p10	true	8	 8                                           	15->p20	false	8	 8
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p30	true	8	 32                                          
+33->p30	true	8	 32                                          
+34->p30	true	8	 32                                          
+35->p30	true	8	 32                                          
+36->p30	true	8	 32                                          
+37->p30	true	8	 32                                          
+38->p30	true	8	 32                                          
+39->p30	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	7	 56                                          
+57->p23	true	7	 56                                          
+58->p23	true	7	 56                                          
+59->p23	true	7	 56                                          
+60->p23	true	7	 56                                          
+61->p23	true	7	 56                                          
+62->p23	true	7	 56                                          
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p20	true	8	 0              0->p10	true  8  45            	0->p22	false	8	 0
+1->p20	true	8	 0              1->p11	true  16  45           	1->p22	false	8	 0
+2->p20	true	8	 0              2->p20	true  0  23            	2->p22	false	8	 0
+3->p20	true	8	 0              3->p21	true  24  26           	3->p22	false	8	 0
+4->p20	true	8	 0              4->p22	false  0  32           	4->p22	false	8	 0
+5->p20	true	8	 0              5->p30	true  32  41           	5->p22	false	8	 0
+6->p20	true	8	 0              6->p31	true  48  45           	6->p22	false	8	 0
+7->p20	true	8	 0              7->p23	true  56  16           	7->p22	false	8	 0
+8->p10	true	8	 8              8->p32	false  8  2            	8->p32	false	1	 8
+9->p10	true	8	 8              9->p12	true  40  3            	9->p32	VAZIO		 
+10->p10	true	8	 8                                           	10->p32	VAZIO		 
+11->p10	true	8	 8                                           	11->p32	VAZIO		 
+12->p10	true	8	 8                                           	12->p32	VAZIO		 
+13->p10	true	8	 8                                           	13->p32	VAZIO		 
+14->p10	true	8	 8                                           	14->p32	VAZIO		 
+15->p10	true	8	 8                                           	15->p32	VAZIO		 
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p30	true	8	 32                                          
+33->p30	true	8	 32                                          
+34->p30	true	8	 32                                          
+35->p30	true	8	 32                                          
+36->p30	true	8	 32                                          
+37->p30	true	8	 32                                          
+38->p30	true	8	 32                                          
+39->p30	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	7	 56                                          
+57->p23	true	7	 56                                          
+58->p23	true	7	 56                                          
+59->p23	true	7	 56                                          
+60->p23	true	7	 56                                          
+61->p23	true	7	 56                                          
+62->p23	true	7	 56                                          
+63->p23	VAZIO		                                             
+
+
+T Processo #Threadp2 p2 iniciou acesso a memoria 4
+T Processo #Threadp1 p1 iniciou acesso a memoria 17
+T Processo #Threadp3 p3 iniciou acesso a memoria 11
+
+########### Page Fault da pagina p22!! Estados antes do PageFault: 
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p20	true	8	 0              0->p10	true  8  45            	0->p22	false	8	 0
+1->p20	true	8	 0              1->p11	true  16  45           	1->p22	false	8	 0
+2->p20	true	8	 0              2->p20	true  0  24            	2->p22	false	8	 0
+3->p20	true	8	 0              3->p21	true  24  26           	3->p22	false	8	 0
+4->p20	true	8	 0              4->p22	false  0  32           	4->p22	false	8	 0
+5->p20	true	8	 0              5->p30	true  32  41           	5->p22	false	8	 0
+6->p20	true	8	 0              6->p31	true  48  46           	6->p22	false	8	 0
+7->p20	true	8	 0              7->p23	true  56  16           	7->p22	false	8	 0
+8->p10	true	8	 8              8->p32	false  8  2            	8->p32	false	1	 8
+9->p10	true	8	 8              9->p12	true  40  4            	9->p32	VAZIO		 
+10->p10	true	8	 8                                           	10->p32	VAZIO		 
+11->p10	true	8	 8                                           	11->p32	VAZIO		 
+12->p10	true	8	 8                                           	12->p32	VAZIO		 
+13->p10	true	8	 8                                           	13->p32	VAZIO		 
+14->p10	true	8	 8                                           	14->p32	VAZIO		 
+15->p10	true	8	 8                                           	15->p32	VAZIO		 
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p30	true	8	 32                                          
+33->p30	true	8	 32                                          
+34->p30	true	8	 32                                          
+35->p30	true	8	 32                                          
+36->p30	true	8	 32                                          
+37->p30	true	8	 32                                          
+38->p30	true	8	 32                                          
+39->p30	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	7	 56                                          
+57->p23	true	7	 56                                          
+58->p23	true	7	 56                                          
+59->p23	true	7	 56                                          
+60->p23	true	7	 56                                          
+61->p23	true	7	 56                                          
+62->p23	true	7	 56                                          
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p20	true	8	 0              0->p10	true  8  45            	0->p30	false	8	 0
+1->p20	true	8	 0              1->p11	true  16  45           	1->p30	false	8	 0
+2->p20	true	8	 0              2->p20	true  0  24            	2->p30	false	8	 0
+3->p20	true	8	 0              3->p21	true  24  26           	3->p30	false	8	 0
+4->p20	true	8	 0              4->p22	true  32  33           	4->p30	false	8	 0
+5->p20	true	8	 0              5->p30	false  0  41           	5->p30	false	8	 0
+6->p20	true	8	 0              6->p31	true  48  46           	6->p30	false	8	 0
+7->p20	true	8	 0              7->p23	true  56  16           	7->p30	false	8	 0
+8->p10	true	8	 8              8->p32	false  8  2            	8->p32	false	1	 8
+9->p10	true	8	 8              9->p12	true  40  4            	9->p32	VAZIO		 
+10->p10	true	8	 8                                           	10->p32	VAZIO		 
+11->p10	true	8	 8                                           	11->p32	VAZIO		 
+12->p10	true	8	 8                                           	12->p32	VAZIO		 
+13->p10	true	8	 8                                           	13->p32	VAZIO		 
+14->p10	true	8	 8                                           	14->p32	VAZIO		 
+15->p10	true	8	 8                                           	15->p32	VAZIO		 
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	7	 56                                          
+57->p23	true	7	 56                                          
+58->p23	true	7	 56                                          
+59->p23	true	7	 56                                          
+60->p23	true	7	 56                                          
+61->p23	true	7	 56                                          
+62->p23	true	7	 56                                          
+63->p23	VAZIO		                                             
+
+
+T Processo #Threadp2 p2 iniciou acesso a memoria 17
+T Processo #Threadp1 p1 iniciou acesso a memoria 2
+T Processo #Threadp3 p3 iniciou acesso a memoria 10
+T Processo #Threadp2 p2 iniciou acesso a memoria 25
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp3 p3 iniciou acesso a memoria 11
+T Processo #Threadp2 p2 iniciou acesso a memoria 21
+T Processo #Threadp1 p1 iniciou acesso a memoria 16
+
+########### Page Fault da pagina p30!! Estados antes do PageFault: 
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p20	true	8	 0              0->p10	true  8  46            	0->p30	false	8	 0
+1->p20	true	8	 0              1->p11	true  16  46           	1->p30	false	8	 0
+2->p20	true	8	 0              2->p20	true  0  24            	2->p30	false	8	 0
+3->p20	true	8	 0              3->p21	true  24  26           	3->p30	false	8	 0
+4->p20	true	8	 0              4->p22	true  32  35           	4->p30	false	8	 0
+5->p20	true	8	 0              5->p30	false  0  41           	5->p30	false	8	 0
+6->p20	true	8	 0              6->p31	true  48  48           	6->p30	false	8	 0
+7->p20	true	8	 0              7->p23	true  56  17           	7->p30	false	8	 0
+8->p10	true	8	 8              8->p32	false  8  2            	8->p32	false	1	 8
+9->p10	true	8	 8              9->p12	true  40  5            	9->p32	VAZIO		 
+10->p10	true	8	 8                                           	10->p32	VAZIO		 
+11->p10	true	8	 8                                           	11->p32	VAZIO		 
+12->p10	true	8	 8                                           	12->p32	VAZIO		 
+13->p10	true	8	 8                                           	13->p32	VAZIO		 
+14->p10	true	8	 8                                           	14->p32	VAZIO		 
+15->p10	true	8	 8                                           	15->p32	VAZIO		 
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p21	true	8	 24                                          
+25->p21	true	8	 24                                          
+26->p21	true	8	 24                                          
+27->p21	true	8	 24                                          
+28->p21	true	8	 24                                          
+29->p21	true	8	 24                                          
+30->p21	true	8	 24                                          
+31->p21	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	7	 56                                          
+57->p23	true	7	 56                                          
+58->p23	true	7	 56                                          
+59->p23	true	7	 56                                          
+60->p23	true	7	 56                                          
+61->p23	true	7	 56                                          
+62->p23	true	7	 56                                          
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p20	true	8	 0              0->p10	true  8  46            	0->p21	false	8	 0
+1->p20	true	8	 0              1->p11	true  16  46           	1->p21	false	8	 0
+2->p20	true	8	 0              2->p20	true  0  24            	2->p21	false	8	 0
+3->p20	true	8	 0              3->p21	false  0  26           	3->p21	false	8	 0
+4->p20	true	8	 0              4->p22	true  32  35           	4->p21	false	8	 0
+5->p20	true	8	 0              5->p30	true  24  42           	5->p21	false	8	 0
+6->p20	true	8	 0              6->p31	true  48  48           	6->p21	false	8	 0
+7->p20	true	8	 0              7->p23	true  56  17           	7->p21	false	8	 0
+8->p10	true	8	 8              8->p32	false  8  2            	8->p32	false	1	 8
+9->p10	true	8	 8              9->p12	true  40  5            	9->p32	VAZIO		 
+10->p10	true	8	 8                                           	10->p32	VAZIO		 
+11->p10	true	8	 8                                           	11->p32	VAZIO		 
+12->p10	true	8	 8                                           	12->p32	VAZIO		 
+13->p10	true	8	 8                                           	13->p32	VAZIO		 
+14->p10	true	8	 8                                           	14->p32	VAZIO		 
+15->p10	true	8	 8                                           	15->p32	VAZIO		 
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p30	true	8	 24                                          
+25->p30	true	8	 24                                          
+26->p30	true	8	 24                                          
+27->p30	true	8	 24                                          
+28->p30	true	8	 24                                          
+29->p30	true	8	 24                                          
+30->p30	true	8	 24                                          
+31->p30	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	7	 56                                          
+57->p23	true	7	 56                                          
+58->p23	true	7	 56                                          
+59->p23	true	7	 56                                          
+60->p23	true	7	 56                                          
+61->p23	true	7	 56                                          
+62->p23	true	7	 56                                          
+63->p23	VAZIO		                                             
+
+
+T Processo #Threadp3 p3 iniciou acesso a memoria 3
+T Processo #Threadp2 p2 iniciou acesso a memoria 26
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp3 p3 iniciou alocação de memoria +1
+T Processo #Threadp2 p2 iniciou acesso a memoria 23
+T Processo #Threadp1 p1 iniciou acesso a memoria 12
+T Processo #Threadp3 p3 iniciou alocação de memoria +1
+
+########### Page Fault da pagina p21!! Estados antes do PageFault: 
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p20	true	8	 0              0->p10	true  8  46            	0->p21	false	8	 0
+1->p20	true	8	 0              1->p11	true  16  48           	1->p21	false	8	 0
+2->p20	true	8	 0              2->p20	true  0  24            	2->p21	false	8	 0
+3->p20	true	8	 0              3->p21	false  0  26           	3->p21	false	8	 0
+4->p20	true	8	 0              4->p22	true  32  36           	4->p21	false	8	 0
+5->p20	true	8	 0              5->p30	true  24  43           	5->p21	false	8	 0
+6->p20	true	8	 0              6->p31	true  48  48           	6->p21	false	8	 0
+7->p20	true	8	 0              7->p23	true  56  18           	7->p21	false	8	 0
+8->p10	true	8	 8              8->p32	false  8  6            	8->p32	false	3	 8
+9->p32	false	3	 8             9->p12	true  40  5            	9->p32	VAZIO		 
+10->p32	false	3	 8                                          	10->p32	VAZIO		 
+11->p10	true	8	 8                                           	11->p32	VAZIO		 
+12->p10	true	8	 8                                           	12->p32	VAZIO		 
+13->p10	true	8	 8                                           	13->p32	VAZIO		 
+14->p10	true	8	 8                                           	14->p32	VAZIO		 
+15->p10	true	8	 8                                           	15->p32	VAZIO		 
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p30	true	8	 24                                          
+25->p30	true	8	 24                                          
+26->p30	true	8	 24                                          
+27->p30	true	8	 24                                          
+28->p30	true	8	 24                                          
+29->p30	true	8	 24                                          
+30->p30	true	8	 24                                          
+31->p30	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p23	true	7	 56                                          
+57->p23	true	7	 56                                          
+58->p23	true	7	 56                                          
+59->p23	true	7	 56                                          
+60->p23	true	7	 56                                          
+61->p23	true	7	 56                                          
+62->p23	true	7	 56                                          
+63->p23	VAZIO		                                             
+
+
+---Estados após o PageFault:
+
+#Estado da memoria Fisica#    		#Tabela de Paginas#         	#Estado da memoria Virtual#
+i-IDpag-MemF?-mAloc-ponteiro[0]  	i-IDpag-MemF?-p[0]-cLRU         i-IDpag - MemF?-mAloc-ponteiro[0]
+0->p20	true	8	 0              0->p10	true  8  46            	0->p23	false	7	 0
+1->p20	true	8	 0              1->p11	true  16  48           	1->p23	false	7	 0
+2->p20	true	8	 0              2->p20	true  0  24            	2->p23	false	7	 0
+3->p20	true	8	 0              3->p21	true  56  27           	3->p23	false	7	 0
+4->p20	true	8	 0              4->p22	true  32  36           	4->p23	false	7	 0
+5->p20	true	8	 0              5->p30	true  24  43           	5->p23	false	7	 0
+6->p20	true	8	 0              6->p31	true  48  48           	6->p23	false	7	 0
+7->p20	true	8	 0              7->p23	false  0  18           	7->p23	VAZIO		 
+8->p10	true	8	 8              8->p32	false  8  6            	8->p32	false	3	 8
+9->p32	false	3	 8             9->p12	true  40  5            	9->p32	VAZIO		 
+10->p32	false	3	 8                                          	10->p32	VAZIO		 
+11->p10	true	8	 8                                           	11->p32	VAZIO		 
+12->p10	true	8	 8                                           	12->p32	VAZIO		 
+13->p10	true	8	 8                                           	13->p32	VAZIO		 
+14->p10	true	8	 8                                           	14->p32	VAZIO		 
+15->p10	true	8	 8                                           	15->p32	VAZIO		 
+16->p11	true	8	 16                                          
+17->p11	true	8	 16                                          
+18->p11	true	8	 16                                          
+19->p11	true	8	 16                                          
+20->p11	true	8	 16                                          
+21->p11	true	8	 16                                          
+22->p11	true	8	 16                                          
+23->p11	true	8	 16                                          
+24->p30	true	8	 24                                          
+25->p30	true	8	 24                                          
+26->p30	true	8	 24                                          
+27->p30	true	8	 24                                          
+28->p30	true	8	 24                                          
+29->p30	true	8	 24                                          
+30->p30	true	8	 24                                          
+31->p30	true	8	 24                                          
+32->p22	true	8	 32                                          
+33->p22	true	8	 32                                          
+34->p22	true	8	 32                                          
+35->p22	true	8	 32                                          
+36->p22	true	8	 32                                          
+37->p22	true	8	 32                                          
+38->p22	true	8	 32                                          
+39->p22	true	8	 32                                          
+40->p12	true	2	 40                                          
+41->p12	true	2	 40                                          
+42->p12	VAZIO		                                             
+43->p12	VAZIO		                                             
+44->p12	VAZIO		                                             
+45->p12	VAZIO		                                             
+46->p12	VAZIO		                                             
+47->p12	VAZIO		                                             
+48->p31	true	8	 48                                          
+49->p31	true	8	 48                                          
+50->p31	true	8	 48                                          
+51->p31	true	8	 48                                          
+52->p31	true	8	 48                                          
+53->p31	true	8	 48                                          
+54->p31	true	8	 48                                          
+55->p31	true	8	 48                                          
+56->p21	true	8	 56                                          
+57->p21	true	8	 56                                          
+58->p21	true	8	 56                                          
+59->p21	true	8	 56                                          
+60->p21	true	8	 56                                          
+61->p21	true	8	 56                                          
+62->p21	true	8	 56                                          
+63->p21	true	8	 56                                          
+
+
+T Processo #Threadp2 p2 iniciou acesso a memoria 13
+T Processo #Threadp1 p1 iniciou acesso a memoria 7
+T Processo #Threadp3 p3 iniciou acesso a memoria 6
+T Processo #Threadp2 p2 iniciou acesso a memoria 6
+T Processo #Threadp1 p1 iniciou acesso a memoria 0
+T Processo #Threadp3 p3 iniciou acesso a memoria 8
+T Processo #Threadp2 p2 iniciou acesso a memoria 19
+T Processo #Threadp1 p1 iniciou acesso a memoria 2
+T Processo #Threadp3 p3 iniciou acesso a memoria 14
+T Processo #Threadp2 p2 iniciou alocação de memoria +1
+T Processo #Threadp1 p1 iniciou alocação de memoria +1
+T Processo #Threadp3 p3 iniciou acesso a memoria 6
+ERRO: Nao foi possivel alocar memoria para p2: Memoria Cheia

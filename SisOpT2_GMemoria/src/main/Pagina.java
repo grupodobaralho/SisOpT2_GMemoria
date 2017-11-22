@@ -22,6 +22,8 @@ package main;
  *            de tabela de páginas. O enunciado do trabalho, os arquivos de
  *            teste e o artigo que descreve melhor o problema e a solução, estão
  *            todos disponiveis neste projeto.
+ *            
+ * Os resultados do programa foram anexados em arquivos nomeanos "SAIDA-X-Y.txt".
  * 
  */
 public class Pagina {

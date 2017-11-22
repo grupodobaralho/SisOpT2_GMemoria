@@ -35,6 +35,8 @@ import java.util.Scanner;
  *            de tabela de páginas. O enunciado do trabalho, os arquivos de
  *            teste e o artigo que descreve melhor o problema e a solução, estão
  *            todos disponiveis neste projeto.
+ *            
+ * Os resultados do programa foram anexados em arquivos nomeanos "SAIDA-X-Y.txt".
  * 
  */
 public class App {
@@ -68,7 +70,7 @@ public class App {
 	public static void main(String[] args) {
 
 		// Escolha o arquivo a ser executado
-		String arquivo = "SEQ-LRU.txt";
+		 String arquivo = "SEQ-LRU.txt";
 		// String arquivo = "SEQ-ALE.txt";
 		// String arquivo = "ALE-LRU.txt";
 		// String arquivo = "ALE-ALE.txt";
